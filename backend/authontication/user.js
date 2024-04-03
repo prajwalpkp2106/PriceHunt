@@ -13,27 +13,7 @@ const UserSchema=new mongoose.Schema({
         type:String,
         required:true
     },
-    instaid:{
-        type:String,
-        required:false
-    },
-    instapass:{
-        type:String,
-        required:false
-    },
-    fbid:{
-        type:String,
-        required:false
-    },
-    fbpass:{
-        type:String,
-        required:false
-    },
-    twiid:{
-        type:String,
-        required:false
-    },
-    twipass:{
+    otp:{
         type:String,
         required:false
     }
