@@ -13,6 +13,7 @@ closeShopping.addEventListener('click', ()=>{
     body.classList.remove('active');
 })
 
+// add here the loops to fetch the the data and image from the api or web scrapes
 let products = [
     {
         id: 1,
