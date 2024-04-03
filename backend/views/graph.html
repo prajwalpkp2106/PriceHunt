@@ -1,0 +1,45 @@
+>
+    <div>
+        <canvas id="myChart"></canvas>
+      </div>
+
+      <canvas 
+        id="myChart"
+        aria-label="chart"
+        role="img"
+        width="500"
+        height="500"
+        ></canvas>
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+      <script>
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+              label: '# of Votes',
+              data: [12, 19, 3, 5, 2, 3],
+              backgroundColor:["red","green","blue"],
+            }]
+          },
+          options: {
+            responsive: false,
+            layout: {
+                padding: {
+                    left: 50,
+                    right: 0,
+                    top: 50,
+                },
+            },
+            },
+          
+        });
+      </script>
+       
+    
+
+
