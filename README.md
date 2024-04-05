@@ -47,13 +47,10 @@ npm install</code></pre>
 
   <h2>Acknowledgements</h2>
 
-  <ul>
-    <li>Thanks to Gemini for providing the chatbot functionality.</li>
-    <li>Special thanks to all contributors who have helped to improve this project.</li>
-  </ul>
+
 
   <h2>Contact</h2>
 
-  <p>For any inquiries or feedback, please contact [your-email-address].</p>
+  <p>For any inquiries or feedback, please contact pricehunt@gmail.com.</p>
 
   <p>Happy price comparing! 🛒🚀</p>
