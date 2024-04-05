@@ -45,10 +45,6 @@ npm install</code></pre>
     <li>Create a new Pull Request</li>
   </ol>
 
-  <h2>License</h2>
-
-  <p>This project is licensed under the <a href="LICENSE">MIT License</a>.</p>
-
   <h2>Acknowledgements</h2>
 
   <ul>
