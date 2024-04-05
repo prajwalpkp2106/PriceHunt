@@ -1,13 +1,4 @@
 # pricehunt
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Price Comparison Project</title>
-</head>
-<body>
-
   <h1>Price Comparison Project</h1>
 
   <p>This project aims to provide users with a convenient platform to compare prices of products across multiple e-commerce websites in one place. With the integration of Gemini, a chatbot feature, users can effortlessly search for products through images or text queries, as well as ask any questions related to the products. Additionally, the project includes a graphical representation of the price trends over the last 6 months, allowing users to make informed purchasing decisions.</p>
@@ -70,6 +61,3 @@ npm install</code></pre>
   <p>For any inquiries or feedback, please contact [your-email-address].</p>
 
   <p>Happy price comparing! 🛒🚀</p>
-
-</body>
-</html>
