@@ -1,5 +1,5 @@
-# pricehunt
-  <h1>Price Comparison Project</h1>
+
+  <h1>PriceHunt</h1>
 
   <p>This project aims to provide users with a convenient platform to compare prices of products across multiple e-commerce websites in one place. With the integration of Gemini, a chatbot feature, users can effortlessly search for products through images or text queries, as well as ask any questions related to the products. Additionally, the project includes a graphical representation of the price trends over the last 6 months, allowing users to make informed purchasing decisions.</p>
 
