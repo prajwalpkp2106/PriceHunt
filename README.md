@@ -51,6 +51,6 @@ npm install</code></pre>
 
   <h2>Contact</h2>
 
-  <p>For any inquiries or feedback, please contact pricehunt@gmail.com.</p>
+  <p>For any inquiries or feedback, please contact pricehunt.pbl@gmail.com.</p>
 
   <p>Happy price comparing! 🛒🚀</p>
