@@ -531,17 +531,16 @@
           <div class="right_contact">
 
               <div class="contact-form">
-                  <form method="post" action="/mail/">
-
+                  
                       <div>
                           <input type="hidden" name="access_key" value="384373e7-6728-4d7d-b028-47ce48c3d1b4">
-                          <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                          <input type="text" class="form-control" id="from_name" name="from_name" placeholder="Name">
                           <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
                       </div>
-                      <input type="email" class="form-control" id="email" name="email" placeholder="E-mail"> 
-                      <textarea rows="5" name="msg" id="message" placeholder="What can we help you with?" class="form-control"></textarea>
-                      <input type="submit" onclick="sendMail()" class="send-btn" value="send message">
-                  </form>
+                      <input type="email" class="form-control" id="email_id" name="email_id" placeholder="E-mail"> 
+                      <textarea rows="5" name="message" id="message" placeholder="What can we help you with?" class="form-control"></textarea>
+                      <button onclick="sendMail()" class="send-btn">Send Message</button>
+                  
 
               </div>
 
@@ -551,7 +550,7 @@
 </div>
 
 
-
+<script src="index.js"></script>
   </body>
 
   <!-- Footer -->
@@ -756,4 +755,5 @@
       </div>
     </div>
   </footer> 
+
 </html>
