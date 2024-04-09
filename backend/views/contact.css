@@ -1,107 +1,82 @@
-* {
-    margin: 0;
-    padding: 0;
-  }
-  
-  #chatbot {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    margin-bottom: 20px;
-    margin-right: 10px;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    border-radius: 50%;
-    border: none;
-    background-color: #845cd5;
-    color: #1c1f25;
-    font-weight: bold;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    z-index: 9999;
-  }
-  
-  #contact_page {
+
+#contact_page {
     min-height: 100vh;
     width: 100%;
-  }
-  
-  .contact_container {
+}
+
+.contact_container {
     width: 100%;
     display: flex;
     justify-content: space-between;
     height: 75vh;
     padding: 50px 50px 0px 60px;
-  }
-  
-  .contact_container .left_contact {
+}
+
+.contact_container .left_contact {
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .contact_container .left_contact h1 {
+}
+
+.contact_container .left_contact h1 {
     font-size: 40px;
     padding-bottom: 27px;
-  }
-  
-  .contact_container .left_contact p {
+}
+
+.contact_container .left_contact p {
     font-size: 18px;
     padding-bottom: 20px;
     color: #00000093;
     line-height: 1.5rem;
-  }
-  
-  .contact_container .right_contact {
+}
+
+.contact_container .right_contact {
     position: relative;
     top: 50px;
     width: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .contact-form {
+}
+
+.contact-form{
     padding: 2rem 0;
-  }
-  .contact-form form {
+}
+.contact-form form{
     padding-bottom: 1rem;
-  }
-  
-  .form-control {
+}
+
+.form-control{
     width: 100%;
     border: 1.5px solid #c7c7c7;
     border-radius: 5px;
     padding: 0.7rem;
     margin: 0.6rem 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
     outline: 0;
-  }
-  .form-control:focus {
+}
+.form-control:focus{
     box-shadow: 0 0 6px -3px rgba(48, 48, 48, 1);
-  }
-  .contact-form form div {
+}
+.contact-form form div{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 0.6rem;
-  }
-  .send-btn {
-    font-family: "Open Sans", sans-serif;
+}
+.send-btn{
+    font-family: 'Open Sans', sans-serif;
     font-size: 0.9rem;
     text-transform: uppercase;
     color: #fff;
-    background: #8c52ff;
+    background: #8C52FF;
     border: none;
     border-radius: 5px;
     padding: 0.75rem 1.6rem;
     cursor: pointer;
     transition: all 0.4s ease;
-  }
-  .send-btn:hover {
+}
+.send-btn:hover{
     opacity: 0.8;
-  }
-  
+}
