@@ -1,40 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price History Chart</title>
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Canvas element for the chart -->
     <div>
-        <canvas id="myChart"></canvas>
-      </div>
+        <canvas id="myChart" aria-label="chart" role="img" width="500" height="500"></canvas>
+    </div>
 
-      <canvas 
-        id="myChart"
-        aria-label="chart"
-        role="img"
-        width="500"
-        height="500"
-        ></canvas>
-      
-      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-      
-      <script>
-        const ctx = document.getElementById('myChart');
-      
-        new Chart(ctx, {
-          type: 'line',
-          data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-              label: '# of Votes',
-              data: [12, 19, 3, 5, 2, 3],
-              backgroundColor:["red","green","blue"],
-            }]
-          },
-          options: {
-            responsive: false,
-            layout: {
-                padding: {
-                    left: 50,
-                    right: 0,
-                    top: 50,
-                },
-            },
-            },
-          
-        });
-      </script>
+    <script>
+        // Get the 2D context of the canvas element
+        const ctx = document.getElementById('myChart').getContext('2d');
+
+        // Fetch data from API
+        fetch('./price_history.json')
+
+            .then(response => response.json())
+            .then(data => {
+                // Extract labels and data from API response
+                const labels = data.map(item => item.date);
+                const prices = data.map(item => item.price);
+
+                // Create a new Chart instance with fetched data
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Price History',
+                            data: prices,
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        }]
+                    },
+                    options: {
+                        responsive: false,
+                        layout: {
+                            padding: {
+                                left: 50,
+                                right: 0,
+                                top: 50,
+                            },
+                        },
+                    },
+                });
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>
