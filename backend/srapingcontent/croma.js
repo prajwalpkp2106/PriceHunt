@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 
-(async () => {
+const scrapecromaProducts = async (search) => {
     try {
         const browser = await puppeteer.launch({
             headless: true, 
@@ -10,7 +10,7 @@ const puppeteer = require('puppeteer');
         const page = await browser.newPage();
         await page.goto("https://www.croma.com/");
         await page.waitForSelector('input[id="searchV2"]');
-        await page.type('input[id="searchV2"]', 'iphone');
+        await page.type('input[id="searchV2"]', `${search}`);
         await page.keyboard.press('Enter');
         await page.waitForSelector('[class="product-item"]');
         
@@ -30,9 +30,10 @@ const puppeteer = require('puppeteer');
                     img: "",
                   };
                   try {
-                    product.name = element.querySelector(
-                      '[class="product-title plp-prod-title"]'
-                    ).textContent;
+                    el = element.querySelector(
+                      '[data-testid="product-img"]'
+                    );
+                    product.name = (el.querySelector('img')).getAttribute("title");
                   } catch (error) {
                     console.log("No name");
                   }
@@ -52,7 +53,7 @@ const puppeteer = require('puppeteer');
                   }
                   try {
                     el = element.querySelector(
-                      '[class="product-title plp-prod-title"]'
+                      '[data-testid="product-img"]'
                     );
                     product.url = "https://www.croma.com" + (el.querySelector('a')).getAttribute("href");
                   } catch (error) {
@@ -64,15 +65,20 @@ const puppeteer = require('puppeteer');
                   } catch (error) {
                     console.log('No image')
                   }
+                  if(product.img===""){
+                    return;
+                    
+                  }
                   products.push(product);
                 });
                 return products;
             });
         console.log(products);
-
         await browser.close();
         return products;
     } catch (error) {
         console.error(error);
     }
-})();
+  };
+ 
+module.exports=scrapecromaProducts;

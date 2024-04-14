@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 
-(async () => {
+const ytreviews = async (search) => {
     try {
         const browser = await puppeteer.launch({
             headless: true, 
@@ -10,7 +10,7 @@ const puppeteer = require('puppeteer');
         const page = await browser.newPage();
         await page.goto("https://www.youtube.com/");
         await page.waitForSelector('input[id="search"]');
-        await page.type('input[id="search"]', 'iphone review');
+        await page.type('input[id="search"]', `${search} review`);
         await page.keyboard.press('Enter');
         await page.waitForSelector('[class="style-scope ytd-item-section-renderer"]');
         
@@ -48,7 +48,7 @@ const puppeteer = require('puppeteer');
                   } catch (error) {
                     console.log('No image')
                   }
-                  if(product.name!=""){
+                  if(product.name!="" && product.img!=""){
                     products.push(product);
                   }
                 });
@@ -61,4 +61,6 @@ const puppeteer = require('puppeteer');
     } catch (error) {
         console.error(error);
     }
-})();
+  };
+
+  module.exports=ytreviews

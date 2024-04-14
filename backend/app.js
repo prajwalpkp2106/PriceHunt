@@ -30,10 +30,10 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
-
+app.use(express.json());
 app.use(flash());
 
-// app.use('/', require('./routes/index.js'));
+app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
 
 const PORT = process.env.PORT || 8080;

@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 
-(async () => {
+const flipcartproducts = async (search) => {
     try {
         const browser = await puppeteer.launch({
             headless: true, 
@@ -10,7 +10,7 @@ const puppeteer = require('puppeteer');
         const page = await browser.newPage();
         await page.goto("https://www.flipkart.com/");
         await page.waitForSelector('input[type="text"]');
-        await page.type('input[type="text"]', 'laptop');
+        await page.type('input[type="text"]', `${search}`);
         await page.keyboard.press('Enter');
         await page.waitForSelector('[class="_2kHMtA"]');
         
@@ -64,7 +64,9 @@ const puppeteer = require('puppeteer');
                   } catch (error) {
                     console.log('No image')
                   }
-                  products.push(product);
+                  if(product.img!=""){
+                    products.push(product);
+                  }
                 });
                 return products;
             });
@@ -75,4 +77,6 @@ const puppeteer = require('puppeteer');
     } catch (error) {
         console.error(error);
     }
-})();
+  };
+
+  module.exports=flipcartproducts;

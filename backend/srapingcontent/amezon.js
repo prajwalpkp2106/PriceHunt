@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 
-(async () => {
+const amezonProducts = async (search) => {
     try {
         const browser = await puppeteer.launch({
             headless: true, 
@@ -10,7 +10,7 @@ const puppeteer = require('puppeteer');
         const page = await browser.newPage();
         await page.goto("https://www.amazon.in/");
         await page.waitForSelector('input[id="twotabsearchtextbox"]');
-        await page.type('input[id="twotabsearchtextbox"]', 'iphone');
+        await page.type('input[id="twotabsearchtextbox"]', `${search}`);
         await page.keyboard.press('Enter');
         await page.waitForSelector('[data-csa-c-type="item"]');
         
@@ -62,7 +62,9 @@ const puppeteer = require('puppeteer');
                   } catch (error) {
                     console.log('No image')
                   }
-                  products.push(product);
+                  if(product.img!=""){
+                    products.push(product);
+                  }
                 });
                 return products;
             });
@@ -72,4 +74,6 @@ const puppeteer = require('puppeteer');
     } catch (error) {
         console.error(error);
     }
-})();
+  };
+  // amezonProducts()
+  module.exports=amezonProducts;
