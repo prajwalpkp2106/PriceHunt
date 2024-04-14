@@ -20,6 +20,7 @@
     "fs": "^0.0.1-security",
     "mongodb": "^6.3.0",
     "mongoose": "^8.1.2",
+    "nodemailer": "^6.9.13",
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
