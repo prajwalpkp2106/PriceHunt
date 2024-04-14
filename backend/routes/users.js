@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
-const User=require('../authontication/user');
+const {User}=require('../authontication/user');
 const passport=require('passport');
 const nodemailer = require("nodemailer");
 

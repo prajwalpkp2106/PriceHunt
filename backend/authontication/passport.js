@@ -1,7 +1,7 @@
 const LocalStrategy=require('passport-local').Strategy;
 const mangoose=require('mongoose');
 const bcrypt=require('bcryptjs');
-const User=require('../authontication/user');
+const {User}=require('../authontication/user');
 
 module.exports=function(passport){
     passport.use(

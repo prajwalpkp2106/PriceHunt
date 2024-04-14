@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 
-(async () => {
+const myntraproducts = async (search) => {
     try {
         const browser = await puppeteer.launch({
             headless: true, 
@@ -10,7 +10,8 @@ const puppeteer = require('puppeteer');
         const page = await browser.newPage();
         await page.goto("https://www.myntra.com/");
         await page.waitForSelector('input[class="desktop-searchBar"]');
-        await page.type('input[class="desktop-searchBar"]', 'kurti');
+        await page.type('input[class="desktop-searchBar"]', `${search}`);
+        await new Promise(resolve => setTimeout(resolve, 1000));
         await page.keyboard.press('Enter');
         await page.waitForSelector('[class="product-base"]');
         
@@ -63,7 +64,9 @@ const puppeteer = require('puppeteer');
                   } catch (error) {
                     console.log('No image')
                   }
-                  products.push(product);
+                  if(product.img!=""){
+                    products.push(product);
+                  }
                 });
                 return products;
             });
@@ -74,4 +77,7 @@ const puppeteer = require('puppeteer');
     } catch (error) {
         console.error(error);
     }
-})();
+  };
+
+  // myntraproducts('kurti');
+module.exports=myntraproducts;
