@@ -72,10 +72,6 @@ function removeWishListItem(button) {
     });
 }
 
-
-
-
-
 function toggleWishListVisibility() {
   const WishList = document.querySelector(".bg-white.fixed");
   WishList.classList.toggle("hidden");
