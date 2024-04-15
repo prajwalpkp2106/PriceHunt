@@ -8,10 +8,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
     />
-    <link rel="stylesheet" href="../stylesheet/productstyle.css" class="styl">
-    <style>
-      /* Add custom styles here if needed */
-    </style>
+     <link rel="stylesheet" href="../stylesheet/productstyle.css" class="stylesheet">
+
   </head>
   <body class="bg-gray-100 flex flex-col min-h-screen">
     <!-- Header -->
@@ -468,17 +466,20 @@
           Close
         </button>
       </div>
-      <div id="WishListContainer"></div>
+      <div id="WishListContainer">
+
+      </div>
       <div class="flex justify-between mt-4">
         <span class="text-gray-600">Total:</span>
-        <span id="totalCost" class="font-semibold">$0.00</span>
+        <span id="totalCost" class="font-semibold">Rs0.00</span>
       </div>
     </div>
 
     <!-- JavaScript for Add to WishList functionality, toggling WishList visibility, and updating total cost -->
     <script>
-      let totalCost = 0;
 
+
+      let totalCost = 0;
       function addToWishList(button) {
         // Get product details
         const productCard = button.closest(".bg-white");

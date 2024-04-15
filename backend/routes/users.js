@@ -105,12 +105,12 @@ router.post('/forgotpass',async(req,res)=>{
     port: 587,
     secure: false, 
     auth: {
-      user: "pratikp3800@gmail.com", 
-      pass: "lupt nqan vhfl jsdr",
+      user: "pricehunt.pbl@gmail.com", 
+      pass: "szrg tyxc tclh ninh",
     },
   });
   let info = await transporter.sendMail({
-    from: '"You" <pratikp3800@gmail.com>',
+    from: '"You" <pricehunt.pbl@gmail.com>',
     to: `${req.body.email}`,
     subject: "Testing, testing, 123",
     html: `
