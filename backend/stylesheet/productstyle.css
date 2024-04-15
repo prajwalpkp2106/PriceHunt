@@ -142,3 +142,22 @@ footer {
     border-color: #999;
 }
 
+#popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  width: 80px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 10%;
+  border: none;
+  background-color: #845cd5;
+  color: #1c1f25;
+  font-weight: bold;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  z-index: 9999;
+}

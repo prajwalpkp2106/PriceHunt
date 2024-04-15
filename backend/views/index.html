@@ -25,7 +25,7 @@
 <body>
 
     <!-- Navbar -->
-    <header class="text-black-600 body-font font-semibold bg-purple-500 h-30">
+    <header class="text-black-600 body-font font-semibold bg-purple-500 h-30 fixed w-full z-999" id="home">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
            
             <a class="flex title-font font-medium items-center text-black mb-4 md:mb-0">
@@ -35,11 +35,16 @@
                 <span class="ml-3 text-xl">PriceHunt</span>
             </a>
             <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center cursor-pointer">
-                <a class="mr-6 hover:text-violet-900">Home</a>
-                <a class="mr-6 hover:text-violet-900">Contact Us</a>
-                <a class="mr-6 hover:text-violet-900">About</a>
+                <a class="mr-6 hover:text-violet-900" href="#home">Home</a>
+                <a class="mr-6 hover:text-violet-900" href="#contact_page">Contact Us</a>
+                <a class="mr-6 hover:text-violet-900" href="#team">About</a>
                 <a class="mr-6 hover:text-violet-900" href="product.html" style="text-decoration: none;">Categories</a>
             </nav>
+
+
+
+
+            
              <!-- Searchbar -->
              <div class="relative ml-8 md:ml-0">
                 <input
@@ -78,10 +83,10 @@
             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-violet-900">Welcome to the PriceHunt!
               <br class="hidden lg:inline-block">Start Shopping Now....
             </h1>
-            <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
+            <p class="mb-8 leading-relaxed"><b>Experience the thrill of saving like never before!</b><br> With our platform, comparing prices across multiple e-commerce platforms is a breeze. Dive into a world of convenience and discover the joy of hassle-free shopping.</p>
             <div class="flex justify-center">
-              <button class="inline-flex text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded text-lg">Button</button>
-              <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
+              <button class="inline-flex text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded text-lg">Login</button>
+              <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Explore</button>
             </div>
           </div>
           <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -239,156 +244,6 @@
         </section>
       </div>
 
-       <!-- Featured Products -->
-    <section class="text-black body-font">
-        <div class="container px-5 py-20 mx-auto">
-          <div class="flex flex-col text-center w-full mb-20">
-            <!-- <h2 class="text-s text-violet-600 tracking-widest font-medium title-font mb-1">PRICE COMPARATOR WEBSITE</h2> -->
-            <h1 class="sm:text-3xl text-3xl font-medium title-font text-black">
-              Featured Products
-            </h1>
-          </div>
-          <div class="flex flex-wrap -m-4">
-            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-              <a class="block relative h-48 rounded overflow-hidden">
-                <img
-                  alt="ecommerce"
-                  class="object-cover object-center w-full h-full block"
-                  src="https://th.bing.com/th?q=Short+Sleeve+Denim+Shirt&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.5&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=strict&t=1&mw=247"
-                />
-              </a>
-              <div class="mt-4">
-                <h3 class="text-black text-xs tracking-widest title-font mb-1">
-                  Clothes
-                </h3>
-                <h2 class="text-black title-font text-lg font-medium">
-                  Denim Shirt
-                </h2>
-                <p class="mt-1">$160.00</p>
-              </div>
-            </div>
-            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-              <a class="block relative h-48 rounded overflow-hidden">
-                <img
-                  alt="ecommerce"
-                  class="object-cover object-center w-full h-full block"
-                  src="https://th.bing.com/th/id/OIP.IWfK5pKxTb4JkkWJ0B16sgHaHa?w=188&h=188&c=7&r=0&o=5&dpr=1.5&pid=1.7"
-                />
-              </a>
-              <div class="mt-4">
-                <h3 class="text-black text-xs tracking-widest title-font mb-1">
-                  CATEGORY
-                </h3>
-                <h2 class="text-black title-font text-lg font-medium">
-                  Headphones
-                </h2>
-                <p class="mt-1">$21.15</p>
-              </div>
-            </div>
-            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-              <a class="block relative h-48 rounded overflow-hidden">
-                <img
-                  alt="ecommerce"
-                  class="object-cover object-center w-full h-full block"
-                  src="https://th.bing.com/th/id/OIP.C97L8TBBuVYuAwwIhLUBvgHaHa?w=190&h=190&c=7&r=0&o=5&dpr=1.5&pid=1.7"
-                />
-              </a>
-              <div class="mt-4">
-                <h3 class="text-black text-xs tracking-widest title-font mb-1">
-                  CATEGORY
-                </h3>
-                <h2 class="text-black title-font text-lg font-medium">Shoes</h2>
-                <p class="mt-1">$12.00</p>
-              </div>
-            </div>
-            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-              <a class="block relative h-48 rounded overflow-hidden">
-                <img
-                  alt="ecommerce"
-                  class="object-cover object-center w-full h-full block"
-                  src="https://th.bing.com/th/id/OIP.XALDgsmuP1y63i0AcJSFXAHaKk?w=142&h=202&c=7&r=0&o=5&dpr=1.5&pid=1.7"
-                />
-              </a>
-              <div class="mt-4">
-                <h3 class="text-black text-xs tracking-widest title-font mb-1">
-                  CATEGORY
-                </h3>
-                <h2 class="text-black title-font text-lg font-medium">Dress</h2>
-                <p class="mt-1">$18.40</p>
-              </div>
-            </div>
-            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-              <a class="block relative h-48 rounded overflow-hidden">
-                <img
-                  alt="ecommerce"
-                  class="object-cover object-center w-full h-full block"
-                  src="https://th.bing.com/th/id/OIP.YBzxeFlOxzuL8ukeHgVEHwHaHa?w=176&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"
-                />
-              </a>
-              <div class="mt-4">
-                <h3 class="text-black text-xs tracking-widest title-font mb-1">
-                  CATEGORY
-                </h3>
-                <h2 class="text-black title-font text-lg font-medium">
-                  Leather Bag
-                </h2>
-                <p class="mt-1">$16.00</p>
-              </div>
-            </div>
-            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-              <a class="block relative h-48 rounded overflow-hidden">
-                <img
-                  alt="ecommerce"
-                  class="object-cover object-center w-full h-full block"
-                  src="https://th.bing.com/th/id/OIP.6CkNYA4DyNc_eAiSMB9iyAHaGv?w=198&h=181&c=7&r=0&o=5&dpr=1.5&pid=1.7"
-                />
-              </a>
-              <div class="mt-4">
-                <h3 class="text-black text-xs tracking-widest title-font mb-1">
-                  CATEGORY
-                </h3>
-                <h2 class="text-black title-font text-lg font-medium">
-                  Wooden Table
-                </h2>
-                <p class="mt-1">$21.15</p>
-              </div>
-            </div>
-            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-              <a class="block relative h-48 rounded overflow-hidden">
-                <img
-                  alt="ecommerce"
-                  class="object-cover object-center w-full h-full block"
-                  src="https://th.bing.com/th/id/OIP.ZwoZBX7E8v24JiegCIbXBQHaHa?w=192&h=192&c=7&r=0&o=5&dpr=1.5&pid=1.7"
-                />
-              </a>
-              <div class="mt-4">
-                <h3 class="text-black text-xs tracking-widest title-font mb-1">
-                  CATEGORY
-                </h3>
-                <h2 class="text-black title-font text-lg font-medium">Grinder</h2>
-                <p class="mt-1">$12.00</p>
-              </div>
-            </div>
-            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-              <a class="block relative h-48 rounded overflow-hidden">
-                <img
-                  alt="ecommerce"
-                  class="object-cover object-center w-full h-full block"
-                  src="https://th.bing.com/th/id/OIP.AKX_olsVCjsTIQiKw5J9bwHaG7?w=192&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"
-                />
-              </a>
-              <div class="mt-4">
-                <h3 class="text-black text-xs tracking-widest title-font mb-1">
-                  CATEGORY
-                </h3>
-                <h2 class="text-black title-font text-lg font-medium">T-Shirt</h2>
-                <p class="mt-1">$18.40</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
       <!-- Know About Us -->
       <section class="text-gray-200 body-font bg-violet-300">
         <div class="container px-5 py-24 mx-auto">
@@ -411,7 +266,87 @@
         </div>
       </section>
 
-      <div id="contact_page">
+        <!-- Developers Team -->
+   <section class="text-gray-600 body-font" id="team">
+    <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="text-2xl font-medium title-font mb-4 text-violet-900">OUR TEAM</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-violet-600">Get to know the talented individuals behind our projects. Each member brings unique skills and perspectives to our team, driving us towards success.</p>
+        </div>
+        <div class="flex flex-wrap -m-4">
+            <div class="p-4 lg:w-1/3 md:w-1/2">
+                <div class="h-full flex flex-col items-center text-center border rounded-lg shadow-xl">
+                    <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/200x200">
+                    <div class="w-full">
+                        <h2 class="title-font font-medium text-lg text-gray-900">Prajwal Padole</h2>
+                        <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                        <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                        <span class="inline-flex">
+                            <!-- Social media icons -->
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 lg:w-1/3 md:w-1/2">
+                <div class="h-full flex flex-col items-center text-center border rounded-lg shadow-xl">
+                    <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/201x201">
+                    <div class="w-full">
+                        <h2 class="title-font font-medium text-lg text-gray-900">Pratik Patil</h2>
+                        <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                        <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                        <span class="inline-flex">
+                            <!-- Social media icons -->
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 lg:w-1/3 md:w-1/2">
+                <div class="h-full flex flex-col items-center text-center border rounded-lg shadow-xl">
+                    <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/202x202">
+                    <div class="w-full">
+                        <h2 class="title-font font-medium text-lg text-gray-900">Smeet Nahar</h2>
+                        <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                        <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                        <span class="inline-flex">
+                            <!-- Social media icons -->
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center w-full">
+                <div class="p-4 lg:w-1/3 md:w-1/2">
+                    <div class="h-full flex flex-col items-center text-center border rounded-lg shadow-xl">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/203x203">
+                        <div class="w-full">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Sakshi Marbhal</h2>
+                            <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                            <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                            <span class="inline-flex">
+                                <!-- Social media icons -->
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/3 md:w-1/2">
+                    <div class="h-full flex flex-col items-center text-center border rounded-lg shadow-xl">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/204x204">
+                        <div class="w-full">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Riya Patil</h2>
+                            <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                            <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                            <span class="inline-flex">
+                                <!-- Social media icons -->
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+      <!-- Contact Us -->
+
+      <section id="contact_page" class="mt-4 mb-4">
         <div class="contact_container">
             <div class="left_contact">
                 <div class="text_container">
@@ -439,7 +374,9 @@
   
             </div>
         </div>
-    </div>
+    </section>
+ 
+ 
     
   </div>
   
@@ -447,27 +384,14 @@
   <script src="index.js"></script>
 
         <!-- Footer -->
-  <footer class="text-gray-800 body-font bg-violet-400">
-    <div
-      class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"
-    >
+  <footer class="text-gray-800 body-font bg-violet-400 mt-8">
+   
+
+    <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
       <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-        <a
-          class="flex title-font font-medium items-center md:justify-start justify-center text-white"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            class="w-10 h-10 txt-white p-2 bg-violet-500 rounded-full"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
-            ></path>
+        <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 txt-white p-2 bg-violet-500 rounded-full" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
           </svg>
           <span class="ml-3 text-xl text-black">PriceHunt</span>
         </a>
@@ -475,95 +399,48 @@
           Discover the next level of shopping satisfaction!!!
         </p>
       </div>
-      <div
-        class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center"
-      >
+      <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
         <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-          <h2
-            class="title-font font-medium text-white tracking-widest text-sm mb-3"
-          >
-            CATEGORIES
-          </h2>
+          <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Electronics</h2>
           <nav class="list-none mb-10">
-            <li>
-              <a class="text-black hover:text-violet-800">First Link</a>
-            </li>
-            <li>
-              <a class="text-black hover:text-gray-800">Second Link</a>
-            </li>
-            <li>
-              <a class="text-black hover:text-gray-800">Third Link</a>
-            </li>
-            <li>
-              <a class="text-black hover:text-gray-800">Fourth Link</a>
-            </li>
+            <li><a href="#" class="text-black hover:text-violet-800">Smartphones</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Laptops</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Tablets</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Headphones</a></li>
           </nav>
         </div>
         <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-          <h2
-            class="title-font font-medium text-white tracking-widest text-sm mb-3"
-          >
-            CATEGORIES
-          </h2>
+          <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Fashion</h2>
           <nav class="list-none mb-10">
-            <li>
-              <a class="text-black hover:text-gray-800">First Link</a>
-            </li>
-            <li>
-              <a class="text-black hover:text-gray-800">Second Link</a>
-            </li>
-            <li>
-              <a class="text-black hover:text-gray-800">Third Link</a>
-            </li>
-            <li>
-              <a class="text-black hover:text-gray-800">Fourth Link</a>
-            </li>
+            <li><a href="#" class="text-black hover:text-gray-800">Men's Clothing</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Women's Clothing</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Shoes</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Accessories</a></li>
           </nav>
         </div>
         <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-          <h2
-            class="title-font font-medium text-white tracking-widest text-sm mb-3"
-          >
-            CATEGORIES
-          </h2>
+          <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Home & Kitchen</h2>
           <nav class="list-none mb-10">
-            <li>
-              <a class="text-black hover:text-gray-800">First Link</a>
-            </li>
-            <li>
-              <a class="text-black hover:text-gray-800">Second Link</a>
-            </li>
-            <li>
-              <a class="text-black hover:text-gray-800">Third Link</a>
-            </li>
-            <li>
-              <a class="text-black hover:text-gray-800">Fourth Link</a>
-            </li>
+            <li><a href="#" class="text-black hover:text-gray-800">Furniture</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Appliances</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Cookware</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Home Decor</a></li>
           </nav>
         </div>
         <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-          <h2
-            class="title-font font-medium text-white tracking-widest text-sm mb-3"
-          >
-            CATEGORIES
-          </h2>
+          <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Sports & Outdoors</h2>
           <nav class="list-none mb-10">
-            <li>
-              <a class="text-black hover:text-gray-800">First Link</a>
-            </li>
-            <li>
-              <a class="text-black hover:text-gray-800">Second Link</a>
-            </li>
-            <li>
-              <a class="text-black hover:text-gray-800">Third Link</a>
-            </li>
-            <li>
-              <a class="text-black hover:text-gray-800">Fourth Link</a>
-            </li>
+            <li><a href="#" class="text-black hover:text-gray-800">Exercise & Fitness</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Camping & Hiking</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Outdoor Recreation</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Sports Equipment</a></li>
           </nav>
         </div>
       </div>
     </div>
+    
+
+    <!-- Footer -->
     <div class="bg-violet-700">
       <div
         class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row"
@@ -641,11 +518,29 @@
               <circle cx="4" cy="4" r="2" stroke="none"></circle>
             </svg>
           </a>
+
+          <a class="ml-3 text-black" href="#">
+            <svg fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.419 2.865 8.167 6.839 9.49.5.092.682-.218.682-.48 0-.237-.008-.866-.013-1.7-2.782.604-3.37-1.34-3.37-1.34-.454-1.15-1.11-1.456-1.11-1.456-.908-.62.07-.607.07-.607 1.003.07 1.532 1.03 1.532 1.03.893 1.53 2.345 1.087 2.918.83.09-.645.35-1.087.636-1.338-2.225-.253-4.566-1.112-4.566-4.945 0-1.092.39-1.986 1.032-2.68-.104-.252-.448-1.268.098-2.64 0 0 .837-.268 2.74 1.02.794-.22 1.64-.33 2.485-.334.847.004 1.692.114 2.485.334 1.903-1.288 2.738-1.02 2.738-1.02.55 1.372.206 2.388.102 2.64.642.694 1.03 1.588 1.03 2.68 0 3.84-2.344 4.688-4.576 4.937.36.31.678.922.678 1.858 0 1.344-.012 2.425-.012 2.755 0 .267.18.577.688.478C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path>
+            </svg>
+          </a>
         </span>
       </div>
     </div>
+
   </footer>
 
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+  </script>
 
 
 </body>
