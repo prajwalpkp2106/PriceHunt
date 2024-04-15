@@ -8,9 +8,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
     />
-    <style>
-      /* Add custom styles here if needed */
-    </style>
+     <link rel="stylesheet" href="../stylesheet/productstyle.css" class="stylesheet">
+
   </head>
   <body class="bg-gray-100 flex flex-col min-h-screen">
     <!-- Header -->
@@ -68,6 +67,7 @@
         <div
           class="bg-white rounded-lg shadow-md p-4"
           data-category="category1"
+          style="max-height: 400px; overflow-y: auto;"
         >
           <span class="text-xs text-gray-500">Category: Category 1</span>
           <img
@@ -101,10 +101,12 @@
             </button>
           </div>
         </div>
+
         <!-- Repeat product cards for each category -->
         <div
           class="bg-white rounded-lg shadow-md p-4"
           data-category="category2"
+          style="max-height: 400px; overflow-y: auto;"
         >
           <span class="text-xs text-gray-500">Category: Category 2</span>
           <img
@@ -138,119 +140,11 @@
             </button>
           </div>
         </div>
+
         <div
           class="bg-white rounded-lg shadow-md p-4"
           data-category="category3"
-        >
-          <span class="text-xs text-gray-500">Category: Category 3</span>
-          <img
-            src="https://via.placeholder.com/300"
-            alt="Product Image"
-            class="w-full h-40 object-cover mb-4"
-          />
-          <h2 class="text-lg font-semibold">Product Name 3</h2>
-          <p class="text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-          <div class="mt-4 flex justify-between items-center">
-            <span class="text-purple-500 font-semibold">$59.99</span>
-            <div class="flex items-center">
-              <button
-                onclick="increaseQuantity(this)"
-                class="text-gray-500 mr-2"
-              >
-                +
-              </button>
-              <span class="mr-2">1</span>
-              <button onclick="decreaseQuantity(this)" class="text-gray-500">
-                -
-              </button>
-            </div>
-            <button
-              onclick="addToWishList(this)"
-              class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600"
-            >
-              Add to WishList
-            </button>
-          </div>
-        </div>
-        <!-- Repeat product cards for each category -->
-        <div
-          class="bg-white rounded-lg shadow-md p-4"
-          data-category="category1"
-        >
-          <span class="text-xs text-gray-500">Category: Category 1</span>
-          <img
-            src="https://via.placeholder.com/300"
-            alt="Product Image"
-            class="w-full h-40 object-cover mb-4"
-          />
-          <h2 class="text-lg font-semibold">Product Name</h2>
-          <p class="text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-          <div class="mt-4 flex justify-between items-center">
-            <span class="text-purple-500 font-semibold">$99.99</span>
-            <div class="flex items-center">
-              <button
-                onclick="increaseQuantity(this)"
-                class="text-gray-500 mr-2"
-              >
-                +
-              </button>
-              <span class="mr-2">1</span>
-              <button onclick="decreaseQuantity(this)" class="text-gray-500">
-                -
-              </button>
-            </div>
-            <button
-              onclick="addToWishList(this)"
-              class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600"
-            >
-              Add to WishList
-            </button>
-          </div>
-        </div>
-        <!-- Repeat product cards for each category -->
-        <div
-          class="bg-white rounded-lg shadow-md p-4"
-          data-category="category2"
-        >
-          <span class="text-xs text-gray-500">Category: Category 2</span>
-          <img
-            src="https://via.placeholder.com/300"
-            alt="Product Image"
-            class="w-full h-40 object-cover mb-4"
-          />
-          <h2 class="text-lg font-semibold">Product Name 2</h2>
-          <p class="text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-          <div class="mt-4 flex justify-between items-center">
-            <span class="text-purple-500 font-semibold">$79.99</span>
-            <div class="flex items-center">
-              <button
-                onclick="increaseQuantity(this)"
-                class="text-gray-500 mr-2"
-              >
-                +
-              </button>
-              <span class="mr-2">1</span>
-              <button onclick="decreaseQuantity(this)" class="text-gray-500">
-                -
-              </button>
-            </div>
-            <button
-              onclick="addToWishList(this)"
-              class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600"
-            >
-              Add to WishList
-            </button>
-          </div>
-        </div>
-        <div
-          class="bg-white rounded-lg shadow-md p-4"
-          data-category="category3"
+          style="max-height: 400px; overflow-y: auto;"
         >
           <span class="text-xs text-gray-500">Category: Category 3</span>
           <img
@@ -285,9 +179,11 @@
           </div>
         </div>
 
+        <!-- Repeat product cards for each category -->
         <div
           class="bg-white rounded-lg shadow-md p-4"
           data-category="category1"
+          style="max-height: 400px; overflow-y: auto;"
         >
           <span class="text-xs text-gray-500">Category: Category 1</span>
           <img
@@ -321,10 +217,12 @@
             </button>
           </div>
         </div>
+
         <!-- Repeat product cards for each category -->
         <div
           class="bg-white rounded-lg shadow-md p-4"
           data-category="category2"
+          style="max-height: 400px; overflow-y: auto;"
         >
           <span class="text-xs text-gray-500">Category: Category 2</span>
           <img
@@ -334,7 +232,8 @@
           />
           <h2 class="text-lg font-semibold">Product Name 2</h2>
           <p class="text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti eos sapiente dolore? Ab ad vel dolorem non doloribus optio undlorem12
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisquam, quide inventore ex adipisci?sit amet, consectetur adipiscing elit.
           </p>
           <div class="mt-4 flex justify-between items-center">
             <span class="text-purple-500 font-semibold">$79.99</span>
@@ -358,9 +257,11 @@
             </button>
           </div>
         </div>
+
         <div
           class="bg-white rounded-lg shadow-md p-4"
           data-category="category3"
+          style="max-height: 400px; overflow-y: auto;"
         >
           <span class="text-xs text-gray-500">Category: Category 3</span>
           <img
@@ -394,6 +295,161 @@
             </button>
           </div>
         </div>
+
+        <!-- modified here -->
+        <div
+        class="bg-white rounded-lg shadow-md p-4"
+        data-category="category3"
+        style="max-height: 400px; overflow-y: auto;"
+      >
+        <span class="text-xs text-gray-500">Category: Category 3</span>
+        <img
+          src="https://via.placeholder.com/300"
+          alt="Product Image"
+          class="w-full h-40 object-cover mb-4"
+        />
+        <h2 class="text-lg font-semibold">Modified Product</h2>
+        <p class="text-gray-600">
+          Lorem ipsum dolor sit amet, Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error voluptatum nostrum eum quasi perferendis porro sit, atque sint voluptate mollitia. Voluptatem laboriosam sapiente architecto, nisi at repellendus perspiciatis hic quae ipsum aliquam sit rerum? Temporibus asperiores ipsa commodi aperiam magni perferendis non? Maxime ipsa, natus placeat magnam corrupti quos dicta i ad similique laboriosam illum.
+          fermentum.
+        </p>
+        <div class="mt-4 flex justify-between items-center">
+          <span class="text-purple-500 font-semibold">$59.99</span>
+          <div class="flex items-center">
+            <button onclick="increaseQuantity(this)" class="text-gray-500 mr-2">
+              +
+            </button>
+            <span class="mr-2">1</span>
+            <button onclick="decreaseQuantity(this)" class="text-gray-500">
+              -
+            </button>
+          </div>
+          <button
+            onclick="addToWishList(this)"
+            class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600"
+          >
+            Add to WishList
+          </button>
+        </div>
+      </div>
+      
+
+        <div
+          class="bg-white rounded-lg shadow-md p-4"
+          data-category="category1"
+          style="max-height: 400px; overflow-y: auto;"
+        >
+          <span class="text-xs text-gray-500">Category: Category 1</span>
+          <img
+            src="https://via.placeholder.com/300"
+            alt="Product Image"
+            class="w-full h-40 object-cover mb-4"
+          />
+          <h2 class="text-lg font-semibold">Product Name</h2>
+          <p class="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <div class="mt-4 flex justify-between items-center">
+            <span class="text-purple-500 font-semibold">$99.99</span>
+            <div class="flex items-center">
+              <button
+                onclick="increaseQuantity(this)"
+                class="text-gray-500 mr-2"
+              >
+                +
+              </button>
+              <span class="mr-2">1</span>
+              <button onclick="decreaseQuantity(this)" class="text-gray-500">
+                -
+              </button>
+            </div>
+            <button
+              onclick="addToWishList(this)"
+              class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600"
+            >
+              Add to WishList
+            </button>
+          </div>
+        </div>
+
+        <!-- Repeat product cards for each category -->
+        <div
+          class="bg-white rounded-lg shadow-md p-4"
+          data-category="category2"
+          style="max-height: 400px; overflow-y: auto;"
+        >
+          <span class="text-xs text-gray-500">Category: Category 2</span>
+          <img
+            src="https://via.placeholder.com/300"
+            alt="Product Image"
+            class="w-full h-40 object-cover mb-4"
+          />
+          <h2 class="text-lg font-semibold">Product Name 2</h2>
+          <p class="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <div class="mt-4 flex justify-between items-center">
+            <span class="text-purple-500 font-semibold">$79.99</span>
+            <div class="flex items-center">
+              <button
+                onclick="increaseQuantity(this)"
+                class="text-gray-500 mr-2"
+              >
+                +
+              </button>
+              <span class="mr-2">1</span>
+              <button onclick="decreaseQuantity(this)" class="text-gray-500">
+                -
+              </button>
+            </div>
+            <button
+              onclick="addToWishList(this)"
+              class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600"
+            >
+              Add to WishList
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-lg shadow-md p-4"
+          data-category="category3"
+          style="max-height: 400px; overflow-y: auto;"
+        >
+          <span class="text-xs text-gray-500">Category: Category 3</span>
+          <img
+            src="https://via.placeholder.com/300"
+            alt="Product Image"
+            class="w-full h-40 object-cover mb-4"
+          />
+          <h2 class="text-lg font-semibold">Product Name 3</h2>
+          <p class="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <div class="mt-4 flex justify-between items-center">
+            <span class="text-purple-500 font-semibold">$59.99</span>
+            <div class="flex items-center">
+              <button
+                onclick="increaseQuantity(this)"
+                class="text-gray-500 mr-2"
+              >
+                +
+              </button>
+              <span class="mr-2">1</span>
+              <button onclick="decreaseQuantity(this)" class="text-gray-500">
+                -
+              </button>
+            </div>
+            <button
+              onclick="addToWishList(this)"
+              class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600"
+            >
+              Add to WishList
+            </button>
+          </div>
+        </div>
+
+        <button id="popup">Open Popup</button>
       </div>
     </div>
 
@@ -410,17 +466,20 @@
           Close
         </button>
       </div>
-      <div id="WishListContainer"></div>
+      <div id="WishListContainer">
+
+      </div>
       <div class="flex justify-between mt-4">
         <span class="text-gray-600">Total:</span>
-        <span id="totalCost" class="font-semibold">$0.00</span>
+        <span id="totalCost" class="font-semibold">Rs0.00</span>
       </div>
     </div>
 
     <!-- JavaScript for Add to WishList functionality, toggling WishList visibility, and updating total cost -->
     <script>
-      let totalCost = 0;
 
+
+      let totalCost = 0;
       function addToWishList(button) {
         // Get product details
         const productCard = button.closest(".bg-white");

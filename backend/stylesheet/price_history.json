@@ -1,0 +1,46 @@
+[
+  {
+    "date": "OCT",
+    "price": 52090
+  },
+  {
+    "date": "JUL",
+    "price": 52108
+  },
+  {
+    "date": "AUG",
+    "price": 52098
+  },
+  {
+    "date": "OCT",
+    "price": 52102
+  },
+  {
+    "date": "SEPT",
+    "price": 52105
+  },
+  {
+    "date": "NOV",
+    "price": 52122
+  },
+  {
+    "date": "DEC",
+    "price": 52115
+  },
+  {
+    "date": "JAN",
+    "price": 52107
+  },
+  {
+    "date": "FEB",
+    "price": 52115
+  },
+  {
+    "date": "MAR",
+    "price": 52116
+  },
+  {
+    "date": "APR",
+    "price": 52107
+  }
+]

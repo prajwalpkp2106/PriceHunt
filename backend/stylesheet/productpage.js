@@ -1,5 +1,3 @@
-
-
 async function addToWishList(button) {
   const productCard = button.closest(".bg-white");
   const productName = productCard.querySelector("h2").textContent;
@@ -74,10 +72,6 @@ function removeWishListItem(button) {
     });
 }
 
-
-
-
-
 function toggleWishListVisibility() {
   const WishList = document.querySelector(".bg-white.fixed");
   WishList.classList.toggle("hidden");
@@ -129,8 +123,142 @@ function sortProductsByPrice(order) {
   });
 }
 
+function acceptInput() {
+  let targetprice = document.querySelector("#targetprice").value;
+  console.log("Accepted price:", targetprice);
+  if(targetprice<=200){
 
+  }
+}
 
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function generateRandomPrices(initialPrice, minChange, maxChange) {
+  const prices = [{ "date": "OCT", "price": initialPrice }];
+  const months = ["JUL","AUG","OCT","SEPT","NOV", "DEC", "JAN", "FEB", "MAR", "APR"];
+  let currentPrice = initialPrice;
+
+  for (let i = 0; i < months.length; i++) {
+      const randomChange = getRandomInt(minChange, maxChange);
+      const change = Math.random() < 0.5 ? randomChange : -randomChange;
+      currentPrice += change;
+      prices.push({ "date": months[i], "price": currentPrice });
+  }
+  return prices;
+}
+
+// function openPopup1(button) {
+
+//   document.getElementById('popup').classList.remove('hidden');
+//   const WishListItem = button.closest(".bg-white");
+//   const productPrice = parseFloat(
+//      WishListItem.querySelector("#productPrice").textContent.replace(/₹|,/g, "") 
+//   );
+//   console.log("Product price:", productPrice);
+
+//           // Get the 2D context of the canvas element
+//           const ctx = document.getElementById('myChart').getContext('2d');
+//           // Fetch data from API
+//           // fetch('./price_history.json')
+  
+//           //     .then(response => response.json())
+//           //     .then(data => {
+//                   // Extract labels and data from API response
+//                   const initialPrice = productPrice;
+//                   const minChange = -20; // Minimum decrease
+//                   const maxChange = 30;
+//                   const data=generateRandomPrices(initialPrice, minChange, maxChange);
+//                   const labels = data.map(item => item.date);
+//                   const prices = data.map(item => item.price);
+  
+//                   // Create a new Chart instance with fetched data
+//                   new Chart(ctx, {
+//                       type: 'line',
+//                       data: {
+//                           labels: labels,
+//                           datasets: [{
+//                               label: 'Price History',
+//                               data: prices,
+//                               borderColor: 'rgba(75, 192, 192, 1)',
+//                               backgroundColor: 'rgba(75, 192, 192, 0.2)',
+//                           }]
+//                       },
+//                       options: {
+//                           responsive: false,
+//                           layout: {
+//                               padding: {
+//                                   left: 50,
+//                                   right: 0,
+//                                   top: 50,
+//                               },
+//                           },
+//                       },
+//                   });
+//               // })
+//               // .catch(error => console.error('Error:', error));
+
+// }
+
+function openPopup1(button) {
+  // Open a new window
+  const popupWindow = window.open('', 'Popup Window', 'width=600,height=400');
+
+  // Write HTML content to the popup window
+  popupWindow.document.write(`
+      <div id="popup" class="hidden fixed top-1/2 left-1/2 flex justify-center items-center">
+          <div class="bg-white rounded-lg shadow-md p-8">
+              <div>
+                  <canvas id="myChart" aria-label="chart" role="img" width="500" height="200"></canvas>
+              </div>
+              <button onclick="closePopup1()" class="absolute top-0 right-0 bg-white rounded-full p-2" id="closebtn">X</button>
+          </div>
+      </div>
+  `);
+
+  // Make the popup window visible
+  popupWindow.document.getElementById('popup').classList.remove('hidden');
+
+  // Generate the chart in the popup window
+  const productPrice = parseFloat(
+      button.closest(".bg-white").querySelector("#productPrice").textContent.replace(/₹|,/g, "")
+  );
+  const initialPrice = productPrice;
+  const minChange = -20; // Minimum decrease
+  const maxChange = 30;
+  const data = generateRandomPrices(initialPrice, minChange, maxChange);
+  const labels = data.map(item => item.date);
+  const prices = data.map(item => item.price);
+  const ctx = popupWindow.document.getElementById('myChart').getContext('2d');
+  new Chart(ctx, {
+      type: 'line',
+      data: {
+          labels: labels,
+          datasets: [{
+              label: 'Price History',
+              data: prices,
+              borderColor: 'rgba(75, 192, 192, 1)',
+              backgroundColor: 'rgba(75, 192, 192, 0.2)',
+          }]
+      },
+      options: {
+          responsive: false,
+          layout: {
+              padding: {
+                  left: 50,
+                  right: 0,
+                  top: 50,
+              },
+          },
+      },
+  });
+}
+
+function closePopup1() {
+  // Close the popup window
+  window.close();
+}
 function openPopup() {
   console.log('hi');
   document.getElementById('popup').classList.remove('hidden');
