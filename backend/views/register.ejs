@@ -1,35 +1,75 @@
-<link rel="stylesheet" href="/style.css">
-<div class="wraper">
-    
-    <form action="/users/register" class="login_input" method="POST">
-        <h1 >Register</h1>
-        <%- include('message.ejs') %>
-        <div class="inputbox">
-            <input type="text" placeholder="enter your name" name="name"  value="<%= typeof name != 'undefined' ? name : '' %>">
-          
-        </div>
-        <div class="inputbox">
-            <input type="email" placeholder="enter your email" name="email" value="<%= typeof email != 'undefined' ? email : '' %>">
-            
-        </div>
-        <div class="inputbox">
-            <input type="password" placeholder="enter your pasword" name="password"  value="<%= typeof password != 'undefined' ? password : '' %>">
-            
-        </div>
-        <div class="inputbox">
-            <input type="password" placeholder="conform your pasword" name="password2" value="<%= typeof password2 != 'undefined' ? password2 : '' %>">
-            
-        </div>
-        
-        <button type="submit" value="register">Register</button>
-        
-        
-        <div class="forgot_registor">
-            <div>
-                Already have an account?<a href="/users/login">login</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="/style.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        .container {
+            max-width: 1000px;
+            padding: 10px;
+        }
+
+        body {
+            background-image: url(image.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* Adjustments for small devices */
+        @media (max-width: 640px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .form-container {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 20px;
+            }
+
+            .image-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="container flex">
+            <div class="form-container bg-white rounded-lg p-4 shadow-lg w-4/5 ml-14">
+                <h2 class="text-3xl font-semibold text-purple-800 mb-6 ml-14 mr-2 text-center">Register</h2>
+                <form action="/users/register" method="POST">
+                    <%- include('message.ejs') %>
+                    <div class="mb-4">
+                        <label for="name" class="block text-black mb-2 ml-14">Name</label>
+                        <input type="text" id="name" name="name" class="w-4/5 px-3 py-2 rounded-md bg-gray-100 text-black focus:outline-none focus:ring focus:ring-purple-200 ml-14 mr-4" value="<%= typeof name !== 'undefined' ? name : '' %>" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-black mb-2 ml-14 mr-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-4/5 px-3 py-2 rounded-md bg-gray-100 text-black focus:outline-none focus:ring focus:ring-purple-200 ml-14 mr-2" value="<%= typeof email !== 'undefined' ? email : '' %>" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="password" class="block text-black mb-2 ml-14 mr-2">Password</label>
+                        <input type="password" id="password" name="password" class="w-4/5 px-3 py-2 rounded-md bg-gray-100 text-black focus:outline-none focus:ring focus:ring-purple-200 ml-14 mr-2" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="confirm-password" class="block text-black mb-2 ml-14 mr-2">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="password2" class="w-4/5 px-3 py-2 rounded-md bg-gray-100 text-black focus:outline-none focus:ring focus:ring-purple-200 ml-14 mr-2" value="<%= typeof password2 !== 'undefined' ? password2 : '' %>" required>
+                    </div>
+                    <button type="submit" class="w-half bg-purple-600 text-white py-2 rounded-md font-semibold hover:bg-purple-500 transition duration-200 px-3 ml-14 mr-2">Register</button>
+                </form>
+                <p class="mt-4 text-black text-center">Already have an account? <a href="/users/login" class="font-semibold underline text-purple-600">Login</a></p>
             </div>
-            
-            
+            <div class="image-container w-2/5 bg-purple-500 rounded-lg p-4 shadow-lg align-center">
+                <img src="https://th.bing.com/th/id/R.db989291b2539b817e46ad20d4947c36?rik=%2b%2bMGLmcdiQGr%2bA&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f5%2fProfile-Male-PNG.png&ehk=QsbgxXcIzFuAxcFB1bNT%2bAssRtdkjvbOj3TFNOeFvrQ%3d&risl=&pid=ImgRaw&r=0" alt="" width="180px" class="mt-12 mb-6 ml-12 align-center">
+                <h3 class="text-3xl font-semibold text-black mb-8 text-center">Start Shopping Now!</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab deleniti voluptates ducimus officia, officiis maiores libero quas!</p>
+            </div>
         </div>
-    </form>
-</div>
+    </div>
+</body>
+</html>
