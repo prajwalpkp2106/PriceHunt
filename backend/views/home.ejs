@@ -416,7 +416,41 @@
 </div>
 
 
-<script src="contact.js"></script>
+<!-- <script src="index.js"></script> -->
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+
+(function(){
+   emailjs.init({
+     publicKey: "tJWe7s0w35Se54Eg5",
+   });
+})();
+</script>
+<script>
+function sendMail() {
+  console.log("sendMail function called"); // Check if function is being called
+  var params = {
+      from_name: document.getElementById("from_name").value,
+      email_id: document.getElementById("email_id").value,
+      message: document.getElementById("message").value,
+      phone: document.getElementById("phone").value,
+  };
+  console.log("Params:", params); // Check the params being passed to emailjs.send()
+  
+  emailjs.send("service_jx6sxvk","template_yii9pwd",params)
+      .then(function(res) {
+          alert("Success! " + res.status);
+          console.log("Email sent successfully:", res);
+      })
+      .catch(function(err) {
+          alert("Error: " + err);
+          console.error("Error sending email:", err);
+      });
+}
+</script>
+
 
     <!-- Footer -->
 <footer class="text-gray-800 body-font bg-violet-400">
@@ -547,7 +581,7 @@
         rel="noopener noreferrer"
         class="text-black ml-1"
         target="_blank"
-        >@pricehunt123.com</a
+        >pricehunt.pbl@gmail.com</a
       >
     </p>
     <span
