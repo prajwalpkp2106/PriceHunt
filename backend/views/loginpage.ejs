@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/login.css">
+<script src="https://cdn.tailwindcss.com"></script>
 <div id="maindiv">
     <div id="subdiv">
       <div id="div1"></div>
@@ -8,24 +9,29 @@
         <div id="form">
         <!-- Form -->
         <form action="/users/login" class="login_input" method="post">
-            <h1>Login</h1>
+            <h1 class="text-3xl font-semibold text-purple-800 mb-6 ml-14 mr-2 text-center">Login</h1>
             <div class="inputbox">
-                <input type="email" placeholder="enter your email" name="email">
+                <label class="block text-black mb-2 ml-14">Email</label>
+                <input type="email" placeholder="enter your email" name="email" class="w-4/5 px-3 py-2 rounded-md bg-gray-100 text-black focus:outline-none focus:ring focus:ring-purple-200 ml-14 mr-4" value="<%= typeof email !== 'undefined' ? name : '' %>" required>
     
             </div>
             <div class="inputbox">
-                <input type="password" placeholder="enter your pasword" name="password">
+                <label class="block text-black mb-2 ml-14">Password</label>
+                <input type="password" placeholder="enter your pasword" name="password" class="w-4/5 px-3 py-2 rounded-md bg-gray-100 text-black focus:outline-none focus:ring focus:ring-purple-200 ml-14 mr-2" required>
     
             </div>
     
-            <button type="submit">login</button>
+            <button type="submit" class="w-1/5 h-10 bg-purple-600 text-white py-2 rounded-md font-semibold hover:bg-purple-500 transition duration-200 px-3 ml-14 py-2 mr-2">Login</button>
     
     
             <div class="forgot_registor">
-                <div>
-                    Dont have an account?<a href="/users/register">register</a>
+                <div class="mt-4 text-black text-center">
+                    Dont have an account? <a href="/users/register" class="font-semibold underline text-purple-600">register</a>
                 </div>
-                <a href="/users/forgotpass">forgot password</a>
+                <div class="mt-4 text-black text-center">
+                    <a href="/users/forgotpass" class="font-semibold underline text-purple-600">forgot password</a>
+                </div>
+               
                 
             </div>
         </form>

@@ -12,13 +12,7 @@
             padding: 10px;
         }
 
-        body {
-            background-image: url(../stylesheet/image.png);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
-
+     
         /* Adjustments for small devices */
         @media (max-width: 640px) {
             .container {
@@ -38,7 +32,7 @@
     </style>
 </head>
 <body>
-    <div class="flex items-center justify-center min-h-screen">
+    <div class="flex items-center justify-center min-h-screen bg-violet-200">
         <div class="container flex">
             <div class="form-container bg-white rounded-lg p-4 shadow-lg w-4/5 ml-14">
                 <h2 class="text-3xl font-semibold text-purple-800 mb-6 ml-14 mr-2 text-center">Register</h2>
@@ -46,19 +40,19 @@
                     <%- include('message.ejs') %>
                     <div class="mb-4">
                         <label for="name" class="block text-black mb-2 ml-14">Name</label>
-                        <input type="text" id="name" name="name" class="w-4/5 px-3 py-2 rounded-md bg-gray-100 text-black focus:outline-none focus:ring focus:ring-purple-200 ml-14 mr-4" value="<%= typeof name !== 'undefined' ? name : '' %>" required>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" class="w-4/5 px-3 py-2 rounded-md bg-gray-100 text-black focus:outline-none focus:ring focus:ring-purple-200 ml-14 mr-4" value="<%= typeof name !== 'undefined' ? name : '' %>" required>
                     </div>
                     <div class="mb-4">
                         <label for="email" class="block text-black mb-2 ml-14 mr-2">Email</label>
-                        <input type="email" id="email" name="email" class="w-4/5 px-3 py-2 rounded-md bg-gray-100 text-black focus:outline-none focus:ring focus:ring-purple-200 ml-14 mr-2" value="<%= typeof email !== 'undefined' ? email : '' %>" required>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" class="w-4/5 px-3 py-2 rounded-md bg-gray-100 text-black focus:outline-none focus:ring focus:ring-purple-200 ml-14 mr-2" value="<%= typeof email !== 'undefined' ? email : '' %>" required>
                     </div>
                     <div class="mb-4">
                         <label for="password" class="block text-black mb-2 ml-14 mr-2">Password</label>
-                        <input type="password" id="password" name="password" class="w-4/5 px-3 py-2 rounded-md bg-gray-100 text-black focus:outline-none focus:ring focus:ring-purple-200 ml-14 mr-2" required>
+                        <input type="password" id="password" name="password" placeholder="Enter your Password" class="w-4/5 px-3 py-2 rounded-md bg-gray-100 text-black focus:outline-none focus:ring focus:ring-purple-200 ml-14 mr-2" required>
                     </div>
                     <div class="mb-6">
-                        <label for="confirm-password" class="block text-black mb-2 ml-14 mr-2">Confirm Password</label>
-                        <input type="password" id="confirm-password" name="password2" class="w-4/5 px-3 py-2 rounded-md bg-gray-100 text-black focus:outline-none focus:ring focus:ring-purple-200 ml-14 mr-2" value="<%= typeof password2 !== 'undefined' ? password2 : '' %>" required>
+                        <label for="confirm-password"  class="block text-black mb-2 ml-14 mr-2">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="password2" placeholder="Re-enter your Password" class="w-4/5 px-3 py-2 rounded-md bg-gray-100 text-black focus:outline-none focus:ring focus:ring-purple-200 ml-14 mr-2" value="<%= typeof password2 !== 'undefined' ? password2 : '' %>" required>
                     </div>
                     <button type="submit" class="w-half bg-purple-600 text-white py-2 rounded-md font-semibold hover:bg-purple-500 transition duration-200 px-3 ml-14 mr-2">Register</button>
                 </form>
