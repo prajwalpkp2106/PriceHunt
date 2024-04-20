@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+
+    <style>
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 300px; /* Adjust the height as needed */
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .slider-content {
+            display: flex;
+            position: absolute;
+            animation: slide 15s infinite; /* Adjust duration as needed */
+        }
+
+        .slider-content img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(-200%);
+            }
+            75% {
+                transform: translateX(-300%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto py-8">
+        <h1 class="text-3xl font-semibold text-center text-purple-800 mb-8">About Us</h1>
+        
+        <!-- Image and Description Section -->
+        <div class="flex flex-col md:flex-row items-center justify-center mb-8">
+            <div class="md:w-1/2">
+                <img src="https://via.placeholder.com/400x300" alt="Shopping Image" class="rounded-lg shadow-lg">
+            </div>
+            <div class="md:w-1/2 md:ml-8 mt-4 md:mt-0">
+                <p class="text-lg text-gray-800 mb-4 bg-purple-200 p-4">PriceHunt is an innovative platform dedicated to helping shoppers find the best deals and discounts across various online stores. Our mission is to simplify the online shopping experience by providing users with a comprehensive tool to compare prices and make informed purchasing decisions.</p>
+            </div>
+        </div>
+
+        <!-- Slider Section -->
+        <div class="slider-container">
+            <div class="slider-content">
+                <img src="https://th.bing.com/th/id/OIP.bnVXuBCYHZfYnXea9yzkEAHaE8?w=248&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Slider Image 1" height="300px">
+                <img src="https://th.bing.com/th/id/OIP.U5nFcRcUdPctXJs_3ft2KQHaE8?w=294&h=196&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Slider Image 2" height="300px">
+                <img src="https://th.bing.com/th/id/OIP.nTvPTRVvZjw6zrp3wo73SgHaEO?w=330&h=188&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Slider Image 3" height="300px">
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+
+        <!-- Future Plans Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg bg-purple-200">
+                <h2 class="text-xl font-semibold text-purple-800 text-center mb-4">Our Vision</h2>
+                <p class="text-gray-700 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt auctor magna, non tempus mi suscipit ac.</p>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg bg-purple-200">
+                <h2 class="text-xl font-semibold mb-4 text-purple-800 text-center">Our Mission</h2>
+                <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt auctor magna, non tempus mi suscipit ac.</p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+            <!-- Developers Team -->
+   <section class="text-gray-600 body-font" id="team">
+    <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="text-2xl font-medium title-font mb-4 text-violet-900">OUR TEAM</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-violet-600">Get to know the talented individuals behind our projects. Each member brings unique skills and perspectives to our team, driving us towards success.</p>
+        </div>
+        <div class="flex flex-wrap -m-4">
+            <div class="p-4 lg:w-1/3 md:w-1/2">
+                <div class="h-full flex flex-col items-center text-center border rounded-lg shadow-xl">
+                    <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/200x200">
+                    <div class="w-full">
+                        <h2 class="title-font font-medium text-lg text-gray-900">Prajwal Padole</h2>
+                        <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                        <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                        <span class="inline-flex">
+                            <!-- Social media icons -->
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 lg:w-1/3 md:w-1/2">
+                <div class="h-full flex flex-col items-center text-center border rounded-lg shadow-xl">
+                    <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/201x201">
+                    <div class="w-full">
+                        <h2 class="title-font font-medium text-lg text-gray-900">Pratik Patil</h2>
+                        <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                        <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                        <span class="inline-flex">
+                            <!-- Social media icons -->
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 lg:w-1/3 md:w-1/2">
+                <div class="h-full flex flex-col items-center text-center border rounded-lg shadow-xl">
+                    <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/202x202">
+                    <div class="w-full">
+                        <h2 class="title-font font-medium text-lg text-gray-900">Smeet Nahar</h2>
+                        <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                        <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                        <span class="inline-flex">
+                            <!-- Social media icons -->
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center w-full">
+                <div class="p-4 lg:w-1/3 md:w-1/2">
+                    <div class="h-full flex flex-col items-center text-center border rounded-lg shadow-xl">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/203x203">
+                        <div class="w-full">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Sakshi Marbhal</h2>
+                            <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                            <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                            <span class="inline-flex">
+                                <!-- Social media icons -->
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/3 md:w-1/2">
+                    <div class="h-full flex flex-col items-center text-center border rounded-lg shadow-xl">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/204x204">
+                        <div class="w-full">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Riya Patil</h2>
+                            <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                            <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                            <span class="inline-flex">
+                                <!-- Social media icons -->
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="text-gray-800 body-font bg-purple-400 mt-8">
+   
+
+    <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 txt-white p-2 bg-violet-500 rounded-full" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+          <span class="ml-3 text-xl text-black">PriceHunt</span>
+        </a>
+        <p class="mt-2 text-sm text-gray-800">
+          Discover the next level of shopping satisfaction!!!
+        </p>
+      </div>
+      <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-purple-800 tracking-widest text-sm mb-3">Electronics</h2>
+          <nav class="list-none mb-10">
+            <li><a href="#" class="text-black hover:text-violet-800">Smartphones</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Laptops</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Tablets</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Headphones</a></li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-purple-800 tracking-widest text-sm mb-3">Fashion</h2>
+          <nav class="list-none mb-10">
+            <li><a href="#" class="text-black hover:text-gray-800">Men's Clothing</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Women's Clothing</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Shoes</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Accessories</a></li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-purple-800 tracking-widest text-sm mb-3">Home & Kitchen</h2>
+          <nav class="list-none mb-10">
+            <li><a href="#" class="text-black hover:text-gray-800">Furniture</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Appliances</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Cookware</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Home Decor</a></li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-purple-800 tracking-widest text-sm mb-3">Sports & Outdoors</h2>
+          <nav class="list-none mb-10">
+            <li><a href="#" class="text-black hover:text-gray-800">Exercise & Fitness</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Camping & Hiking</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Outdoor Recreation</a></li>
+            <li><a href="#" class="text-black hover:text-gray-800">Sports Equipment</a></li>
+          </nav>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Footer -->
+    <div class="bg-purple-700">
+      <div
+        class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row"
+      >
+        <p class="text-black text-sm text-center sm:text-left">
+          © 2024 PriceHunt —
+          <a
+            href="mailto:pricehunt.pbl@gmail.com"
+            rel="noopener noreferrer"
+            class="text-black ml-1"
+            target="_blank"
+            >pricehunt.pbl@gmail.com</a>
+        </p>
+        <span
+          class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start"
+        >
+          <a class="text-black" href="#">
+            <svg
+              fill="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+              ></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-black" href="#">
+            <svg
+              fill="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+              ></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-black" href="#">
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path
+                d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+              ></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-black" href="#">
+            <svg
+              fill="currentColor"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="0"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="none"
+                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+              ></path>
+              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+            </svg>
+          </a>
+
+          <a class="ml-3 text-black" href="#">
+            <svg fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.419 2.865 8.167 6.839 9.49.5.092.682-.218.682-.48 0-.237-.008-.866-.013-1.7-2.782.604-3.37-1.34-3.37-1.34-.454-1.15-1.11-1.456-1.11-1.456-.908-.62.07-.607.07-.607 1.003.07 1.532 1.03 1.532 1.03.893 1.53 2.345 1.087 2.918.83.09-.645.35-1.087.636-1.338-2.225-.253-4.566-1.112-4.566-4.945 0-1.092.39-1.986 1.032-2.68-.104-.252-.448-1.268.098-2.64 0 0 .837-.268 2.74 1.02.794-.22 1.64-.33 2.485-.334.847.004 1.692.114 2.485.334 1.903-1.288 2.738-1.02 2.738-1.02.55 1.372.206 2.388.102 2.64.642.694 1.03 1.588 1.03 2.68 0 3.84-2.344 4.688-4.576 4.937.36.31.678.922.678 1.858 0 1.344-.012 2.425-.012 2.755 0 .267.18.577.688.478C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path>
+            </svg>
+          </a>
+        </span>
+      </div>
+    </div>
+
+  </footer>
+</body>
+</html>
