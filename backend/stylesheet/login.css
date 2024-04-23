@@ -109,7 +109,7 @@ body{
 #subdiv {
   width: 80%;
   height: 80%;
-  border: 2px solid #8c52ff;
+  border-radius: 2px;
   display: flex;
   flex-direction: column; /* Make the content stack vertically */
 }
@@ -141,8 +141,7 @@ input {
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
-  border: 1px solid #8c52ff;
-  box-shadow: 1px 1px 1px 1px #8c52ff;
+
 }
 
 label {
@@ -157,10 +156,8 @@ button {
   background-color: #8c52ff;
   color: white;
   border-radius: 5px;
-  border: 1px solid #8c52ff;
   margin-top: 10px;
   margin-bottom: 10px;
-  box-shadow: 1px 1px 1px 1px #8c52ff;
 }
 
 hr {
