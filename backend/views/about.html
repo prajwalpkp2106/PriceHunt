@@ -315,5 +315,16 @@
     </div>
 
   </footer>
+
+  <script>
+    // JavaScript to clone images for continuous looping
+    const sliderContent = document.querySelector('.slider-content');
+    const images = sliderContent.querySelectorAll('img');
+    images.forEach(image => {
+        const clone = image.cloneNode(true);
+        sliderContent.appendChild(clone);
+    });
+</script>
+
 </body>
 </html>
