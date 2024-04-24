@@ -3,8 +3,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
     />
 <link rel="stylesheet" href="/p.css">
+<link rel="stylesheet" href="/styles.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<div class="bg-gray-100 flex flex-col min-h-screen" id="container"> 
+<style>
+
+</style>
+<div class="bg-gray-100 flex flex-col min-h-screen fixed w-full" id="container"> 
     <header class="bg-purple-500 text-white py-4">
       <div class="container mx-auto flex justify-between items-center">
        
@@ -79,18 +83,29 @@
         </div>
         <button
           onclick="toggleWishListVisibility()"
-          class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600"
+          class="bg-purple-700 text-white px-3 py-1 rounded-md hover:bg-purple-600"
         >
-          View WishList
+          WishList
         </button>
       </div>
     </header>
 
+<!-- Chatbot Popup -->
+<button id="chatbot"><a href="chatbot.html">Chat</a></button>
+
+<!-- Least Price Popup -->
+    <button onclick="openPopup()" class="bg-purple-500 text-white px-3 py-1 rounded-md fixed top-20 right-4 hover:bg-purple-600">Popup</button>
+
+    <!-- Products -->
     <div class="container mx-auto mt-8 px-4 flex-grow">
+
+      
       <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
         id="productGrid"
       >
+
+      <!-- Amazon Products -->
         <% if (amazonProducts && Array.isArray(amazonProducts)) { %>
         <% amazonProducts.forEach(product => { %>
         <div
@@ -114,18 +129,28 @@
             
             <button
               onclick="addToWishList(this)"
-              class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600"
+              class="bg-purple-500 text-white px-2 py-2 rounded-md hover:bg-purple-600 "
             >
-              Add to WishList
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+              <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+            </svg>
             </button>
-            <button onclick="openPopup1(this)" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600 mx-2">Show Trend</button>
+
+            <button onclick="openPopup1(this)" class="bg-purple-500 text-white px-2 py-2 rounded-md hover:bg-purple-600 mx-2"> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"/>
+              </svg></button>
+
+         <!--   <button onclick="openPopup1(this)" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600 mx-2">Show Trend</button>-->
+
             
             <div id="popup" class="hidden fixed top-1/2 left-1/2 flex justify-center items-center">
             <div class="bg-white rounded-lg shadow-md p-8 ">
               <div>
                 <canvas id="myChart" aria-label="chart" role="img" width="500" height="200"></canvas>
             </div>
-                <button onclick="closePopup1()" class="absolute top-0 right-0 bg-white rounded-full p-2" id="closebtn">X</button>
+                <button onclick="closePopup1()" class="absolute top-0 right-0 bg-white rounded-full p-2" id="closebtn">X
+                </button>
               </div>
             </div>  
           </div>
@@ -133,19 +158,38 @@
         <% }); %>
         <% } %>
         
+        <!-- flipkart Products -->
         <% if (flipkartProducts && Array.isArray(flipkartProducts)) { %>
-        <% flipkartProducts.forEach(product => { %>
-          <div
-            class="bg-white rounded-lg shadow-md p-4"
-            data-category="Flipcart"
-            style="max-height: 400px; overflow-y: auto;"
-          >
-            <span class="text-xs text-gray-500">Category: Flipcart</span>
-            <div class="flex justify-center mb-4">
-              <div class="aspect-w-16 aspect-h-9">
+          <% flipkartProducts.forEach(product => { %>
+            <div class="bg-white rounded-lg shadow-md p-4 relative" data-category="Flipcart" style="max-height: 400px; overflow-y: auto;">
+              <span class="text-xs text-gray-500">Category: Flipcart</span>
+              <div class="flex justify-center mb-4">
+                <div class="aspect-w-16 aspect-h-9">
                   <img src="<%= product.img %>" alt="Product Image" class="object-cover">
+                </div>
+              </div>
+              <h2 class="text-lg font-semibold"><%= product.name %></h2>
+              <p class="text-gray-600">Stars: <%= product.stars %></p>
+              <a href="<%= product.url %>" target="_blank" class="text-purple-500 hover:underline">View Product</a>
+              <div class="mt-4 relative">
+                <span class="text-purple-500 font-semibold" id="productPrice" data-price="<%= product.price %>"><%= product.price %></span>
+                <div class="absolute top-0 right-0 flex flex-col items-end space-y-2">
+                  <button onclick="addToWishList(this)" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600">
+                    <!-- SVG icon for adding to wishlist -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                    </svg>
+                  </button>
+                  <button onclick="openPopup1(this)" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600">
+                    <!-- SVG icon for opening the popup -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"/>
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
+
             <h2 class="text-lg font-semibold"><%= product.name %></h2>
             <p class="text-gray-600">
               Stars: <%= product.stars %>
@@ -164,9 +208,16 @@
 
             </div>
           </div>
-          <% }); %>
-          <% } %>
 
+          <% }); %>
+        <% } %>
+        
+        
+
+
+        
+
+          <!-- Croma Products -->
           <% if (cromaProducts && Array.isArray(cromaProducts)) { %>
           <% cromaProducts.forEach(product => { %>
             <div
@@ -192,15 +243,24 @@
                   onclick="addToWishList(this)"
                   class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600"
                 >
-                  Add to WishList
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                  <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                </svg>
                 </button>
-                <button onclick="openPopup1(this)" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600 mx-2">Show Trend</button>
+
+                <button onclick="openPopup1(this)" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600 mx-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"/>
+                </svg></button>
+
+
 
               </div>
             </div>
             <% }); %>
             <% } %>
             
+
+            <!-- Myntra Products -->
             <% if (myntraProducts && Array.isArray(myntraProducts)) { %>
             <% myntraProducts.forEach(product => { %>
               <div
@@ -226,15 +286,23 @@
                     onclick="addToWishList(this)"
                     class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600"
                   >
-                    Add to WishList
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                    <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                  </svg>
                   </button>
-                  <button onclick="openPopup1(this)" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600 mx-2">Show Trend</button>
+
+                  <button onclick="openPopup1(this)" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600 mx-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"/>
+                  </svg></button>
+
 
                 </div>
               </div>
               <% }); %>
               <% } %>
 
+
+              <!-- Ajio Products -->
               <% if (ajioProducts && Array.isArray(ajioProducts)) { %>
               <% ajioProducts.forEach(product => { %>
                 <div
@@ -260,9 +328,15 @@
                       onclick="addToWishList(this)"
                       class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600"
                     >
-                      Add to WishList
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                    </svg>
                     </button>
-                    <button onclick="openPopup1(this)" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600 mx-2">Show Trend</button>
+
+                    <button onclick="openPopup1(this)" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600 mx-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"/>
+                    </svg></button>
+
 
                   </div>
                 </div>
@@ -270,13 +344,14 @@
                 <% } %>
 
       </div>
+
       <div class="my-4 bg-gray-200">
         <% if (reviews && Array.isArray(reviews)) { %><h3>Reviews</h3><% } %>
         <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-4 mb-4"
         id="productGrid"
       >
-      
+
       <% if (reviews && Array.isArray(reviews)) { %>
       <% reviews.forEach(review => { %>
         <a class="flex max-w-md bg-white shadow-lg rounded-lg overflow-hidden items-center" href="<%= review.url %>" target="_blank">
@@ -298,8 +373,10 @@
       
     </div>
 
+
+    <!-- WishList code -->
     <div
-      class="bg-white rounded-lg shadow-md p-4 w-64 fixed top-0 right-0 h-full overflow-y-auto hidden"
+      class="bg-white rounded-lg shadow-md p-4 w-1/3 fixed top-0 right-0 h-full overflow-y-auto hidden"
     >
       <div class="flex justify-between items-center mb-4">
         <h2 class="text-xl font-semibold">Shopping WishList</h2>
@@ -333,7 +410,36 @@
         <button onclick="sendMail()">Accept</button> -->
       </div>
     </div>
+
 </div>
+
+
+
+<script>
+  function openPopup() {
+    // Step 1: Extract Prices
+    const priceElements = document.querySelectorAll('.text-purple-500');
+    
+    // Step 2: Numeric Conversion
+    const numericPrices = Array.from(priceElements)
+                          .map(span => parseFloat(span.textContent.replace('$', '')))
+                          .filter(price => !isNaN(price));
+    
+    // Step 3: Find Minimum Price
+    const minPrice = Math.min(...numericPrices);
+    
+    // Step 4: Identify Minimum Price Element
+    const minPriceElement = Array.from(priceElements)
+                            .find(span => parseFloat(span.textContent.replace('$', '')) === minPrice)
+                            .parentNode;
+    
+    // Step 5: Display Popup
+    alert(`Lowest Price: ${minPriceElement.textContent.trim()}`);
+  }
+  </script>
+  
+
+
 <script>
   // const nodemailer = require("nodemailer");
         async function sendMail(){
@@ -362,7 +468,6 @@
 }
 </script>
 
-<!-- <button onclick="openPopup()" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600">Open Popup</button>
 <div id="popup" class="hidden fixed top-1/2 left-1/2 flex justify-center items-center">
   <div class="bg-white rounded-lg shadow-md p-8 ">
     <p>hi</p>
