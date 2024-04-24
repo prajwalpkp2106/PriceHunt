@@ -135,10 +135,14 @@
               <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
             </svg>
             </button>
+
             <button onclick="openPopup1(this)" class="bg-purple-500 text-white px-2 py-2 rounded-md hover:bg-purple-600 mx-2"> 
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"/>
               </svg></button>
+
+         <!--   <button onclick="openPopup1(this)" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600 mx-2">Show Trend</button>-->
+
             
             <div id="popup" class="hidden fixed top-1/2 left-1/2 flex justify-center items-center">
             <div class="bg-white rounded-lg shadow-md p-8 ">
@@ -185,6 +189,26 @@
                 </div>
               </div>
             </div>
+
+            <h2 class="text-lg font-semibold"><%= product.name %></h2>
+            <p class="text-gray-600">
+              Stars: <%= product.stars %>
+            </p>
+            <a href="<%= product.url %>" target="_blank">View Product</a>
+            <div class="mt-4 flex justify-between items-center">
+              <span class="text-purple-500 font-semibold" id="productPrice" data-price="<%= product.price %>"><%= product.price %></span>
+             
+              <button
+                onclick="addToWishList(this)"
+                class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600"
+              >
+                Add to WishList
+              </button>
+              <button onclick="openPopup1(this)" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600 mx-2">Show Trend</button>
+
+            </div>
+          </div>
+
           <% }); %>
         <% } %>
         
@@ -223,9 +247,12 @@
                   <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
                 </svg>
                 </button>
+
                 <button onclick="openPopup1(this)" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600 mx-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"/>
                 </svg></button>
+
+
 
               </div>
             </div>
@@ -263,9 +290,11 @@
                     <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
                   </svg>
                   </button>
+
                   <button onclick="openPopup1(this)" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600 mx-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"/>
                   </svg></button>
+
 
                 </div>
               </div>
@@ -303,9 +332,11 @@
                       <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
                     </svg>
                     </button>
+
                     <button onclick="openPopup1(this)" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600 mx-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
                       <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"/>
                     </svg></button>
+
 
                   </div>
                 </div>
@@ -314,17 +345,13 @@
 
       </div>
 
-      
-
-       <!-- Reviews Section -->
       <div class="my-4 bg-gray-200">
         <% if (reviews && Array.isArray(reviews)) { %><h3>Reviews</h3><% } %>
         <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-4 mb-4"
         id="productGrid"
       >
-      
-     
+
       <% if (reviews && Array.isArray(reviews)) { %>
       <% reviews.forEach(review => { %>
         <a class="flex max-w-md bg-white shadow-lg rounded-lg overflow-hidden items-center" href="<%= review.url %>" target="_blank">
@@ -440,8 +467,7 @@
   });
 }
 </script>
-<!-- 
-<button onclick="openPopup()" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600">Open Popup</button>
+
 <div id="popup" class="hidden fixed top-1/2 left-1/2 flex justify-center items-center">
   <div class="bg-white rounded-lg shadow-md p-8 ">
     <p>hi</p>
