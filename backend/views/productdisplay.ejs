@@ -118,7 +118,7 @@
             >
               Add to WishList
             </button>
-            <button onclick="openPopup1(this)" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600">Open Popup</button>
+            <button onclick="openPopup1(this)" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600 mx-2">Show Trend</button>
             
             <div id="popup" class="hidden fixed top-1/2 left-1/2 flex justify-center items-center">
             <div class="bg-white rounded-lg shadow-md p-8 ">
@@ -152,7 +152,7 @@
             </p>
             <a href="<%= product.url %>" target="_blank">View Product</a>
             <div class="mt-4 flex justify-between items-center">
-              <span class="text-purple-500 font-semibold"><%= product.price %></span>
+              <span class="text-purple-500 font-semibold" id="productPrice" data-price="<%= product.price %>"><%= product.price %></span>
              
               <button
                 onclick="addToWishList(this)"
@@ -160,6 +160,8 @@
               >
                 Add to WishList
               </button>
+              <button onclick="openPopup1(this)" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600 mx-2">Show Trend</button>
+
             </div>
           </div>
           <% }); %>
@@ -184,7 +186,7 @@
               </p>
               <a href="<%= product.url %>" target="_blank">View Product</a>
               <div class="mt-4 flex justify-between items-center">
-                <span class="text-purple-500 font-semibold"><%= product.price %></span>
+                <span class="text-purple-500 font-semibold" id="productPrice" data-price="<%= product.price %>"><%= product.price %></span>
                 
                 <button
                   onclick="addToWishList(this)"
@@ -192,6 +194,8 @@
                 >
                   Add to WishList
                 </button>
+                <button onclick="openPopup1(this)" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600 mx-2">Show Trend</button>
+
               </div>
             </div>
             <% }); %>
@@ -224,6 +228,8 @@
                   >
                     Add to WishList
                   </button>
+                  <button onclick="openPopup1(this)" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600 mx-2">Show Trend</button>
+
                 </div>
               </div>
               <% }); %>
@@ -256,16 +262,21 @@
                     >
                       Add to WishList
                     </button>
+                    <button onclick="openPopup1(this)" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600 mx-2">Show Trend</button>
+
                   </div>
                 </div>
                 <% }); %>
                 <% } %>
 
       </div>
-      <div
+      <div class="my-4 bg-gray-200">
+        <% if (reviews && Array.isArray(reviews)) { %><h3>Reviews</h3><% } %>
+        <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-4 mb-4"
         id="productGrid"
       >
+      
       <% if (reviews && Array.isArray(reviews)) { %>
       <% reviews.forEach(review => { %>
         <a class="flex max-w-md bg-white shadow-lg rounded-lg overflow-hidden items-center" href="<%= review.url %>" target="_blank">
@@ -281,6 +292,10 @@
         <% }); %>
         <% } %>
       </div>
+      </div>
+      
+
+      
     </div>
 
     <div
@@ -311,11 +326,11 @@
           </div>
         <% }); %>
         <% } %>
-        <label>
+        <!-- <label>
           Enter your price
-        </label>
-        <input type="text" id="targetprice" placeholder="Price">
-        <button onclick="sendMail()">Accept</button>
+        </label> -->
+        <!-- <input type="text" id="targetprice" placeholder="Price">
+        <button onclick="sendMail()">Accept</button> -->
       </div>
     </div>
 </div>
@@ -347,13 +362,13 @@
 }
 </script>
 
-<button onclick="openPopup()" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600">Open Popup</button>
+<!-- <button onclick="openPopup()" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600">Open Popup</button>
 <div id="popup" class="hidden fixed top-1/2 left-1/2 flex justify-center items-center">
   <div class="bg-white rounded-lg shadow-md p-8 ">
     <p>hi</p>
     <button onclick="closePopup()" class="absolute top-0 right-0 bg-white rounded-full p-2" id="closebtn">X</button>
   </div>
-</div>
+</div> -->
 
 <script src="/productpage.js"></script>
-<script src="/graph.js"></script>
+<!-- <script src="/graph.js"></script> -->

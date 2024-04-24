@@ -10,21 +10,24 @@
             <span class="ml-3 text-xl">PriceHunt</span>
         </a>
         <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center cursor-pointer">
-            <a class="mr-6 hover:text-violet-900" >Home</a>
-            <a class="mr-6 hover:text-violet-900">Contact Us</a>
-            <a class="mr-6 hover:text-violet-900">About</a>
-            <a class="mr-6 hover:text-violet-900" href="product.html" style="text-decoration: none;">Categories</a>
+          <a class="mr-6 hover:text-violet-900" href="#home">Home</a>
+          <a class="mr-6 hover:text-violet-900" href="#contact_page">Contact Us</a>
+          <a class="mr-6 hover:text-violet-900" href="#team">About</a>
+            <!-- <a class="mr-6 hover:text-violet-900" href="product.html" style="text-decoration: none;">Categories</a> -->
         </nav>
          <!-- Searchbar -->
-         <div class="relative ml-8 md:ml-0">
+         <form action="/products" method="POST" class="flex ml-2">
+          <!-- <input type="text" name="search" placeholder="Search..." class="rounded-md px-3 py-2 border-none bg-white text-gray-800" /> -->
+          <div class="relative ml-8 md:ml-0">
             <input
                 type="text"
+                name="search"
                 placeholder="Search"
-                class="bg-gray-200 text-black px-10 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-600"
+                class="bg-gray-200 text-black px-10 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+                
             />
             <button
-                class="absolute inset-y-0 right-0 px-3 py-2 bg-violet-600 hover:bg-violet-600 rounded-r-lg" 
-            >
+                class="absolute inset-y-0 right-0 px-3 py-2 bg-purple-600 hover:bg-purple-600 rounded-r-lg">
                 <svg
                 class="h-6 w-6 text-white"
                 xmlns="http://www.w3.org/2000/svg"
@@ -41,6 +44,14 @@
                 </svg>
             </button>
         </div>
+          <select
+            class="rounded-md px-3 py-2 border-none bg-white text-gray-800 ml-2" name="category"
+          >
+            <option value="electronics">Electronic</option>
+            <option value="fashion">Fashion</option>
+          </select>
+          <!-- <button type="submit" class="bg-purple-600 text-white px-3 py-1 rounded-md hover:bg-purple-700 ml-2">Search</button> -->
+      </form>
 
         <button class="inline-flex items-center bg-white border-0 py-2 px-4 focus:outline-none hover:bg-violet-600 rounded text-base mt-8 md:mt-0 ml-6 mr-0" onclick="window.location.href='/users/login'">Login</button>
     </div>
@@ -52,10 +63,9 @@
         <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-violet-900">Welcome to the PriceHunt!
           <br class="hidden lg:inline-block">Start Shopping Now....
         </h1>
-        <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
+        <p class="mb-8 leading-relaxed">With our platform, comparing prices across multiple e-commerce platforms is a breeze. Dive into a world of convenience and discover the joy of hassle-free shopping.</p>
         <div class="flex justify-center">
-          <button class="inline-flex text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded text-lg">Button</button>
-          <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
+          <button class="inline-flex text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded text-lg" onclick="window.location.href='/users/register'">Sign Up</button>
         </div>
       </div>
       <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -65,7 +75,7 @@
   </section>
 
 
-  <button id="chatbot"><a href="chatbot.html">Chat</a></button>
+  <button id="chatbot"><a href="/chat">Chat</a></button>
 
 
 <div style="background-image: url(); background-size: cover">
@@ -375,9 +385,9 @@
           Join us & experience the difference with PriceHunt.
         </h1>
         <button
-          class="flex-shrink-0 text-white bg-violet-500 border-0 py-2 px-8 focus:outline-none hover:bg-violet-600 rounded text-lg mt-10 sm:mt-0"
+          class="flex-shrink-0 text-white bg-violet-500 border-0 py-2 px-8 focus:outline-none hover:bg-violet-600 rounded text-lg mt-10 sm:mt-0" onclick="window.location.href='/users/register'"
         >
-          Know About Us
+          Join Us
         </button>
       </div>
     </div>
@@ -484,90 +494,43 @@ function sendMail() {
   <div
     class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center"
   >
-    <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-      <h2
-        class="title-font font-medium text-white tracking-widest text-sm mb-3"
-      >
-        CATEGORIES
-      </h2>
-      <nav class="list-none mb-10">
-        <li>
-          <a class="text-black hover:text-violet-800">First Link</a>
-        </li>
-        <li>
-          <a class="text-black hover:text-gray-800">Second Link</a>
-        </li>
-        <li>
-          <a class="text-black hover:text-gray-800">Third Link</a>
-        </li>
-        <li>
-          <a class="text-black hover:text-gray-800">Fourth Link</a>
-        </li>
-      </nav>
-    </div>
-    <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-      <h2
-        class="title-font font-medium text-white tracking-widest text-sm mb-3"
-      >
-        CATEGORIES
-      </h2>
-      <nav class="list-none mb-10">
-        <li>
-          <a class="text-black hover:text-gray-800">First Link</a>
-        </li>
-        <li>
-          <a class="text-black hover:text-gray-800">Second Link</a>
-        </li>
-        <li>
-          <a class="text-black hover:text-gray-800">Third Link</a>
-        </li>
-        <li>
-          <a class="text-black hover:text-gray-800">Fourth Link</a>
-        </li>
-      </nav>
-    </div>
-    <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-      <h2
-        class="title-font font-medium text-white tracking-widest text-sm mb-3"
-      >
-        CATEGORIES
-      </h2>
-      <nav class="list-none mb-10">
-        <li>
-          <a class="text-black hover:text-gray-800">First Link</a>
-        </li>
-        <li>
-          <a class="text-black hover:text-gray-800">Second Link</a>
-        </li>
-        <li>
-          <a class="text-black hover:text-gray-800">Third Link</a>
-        </li>
-        <li>
-          <a class="text-black hover:text-gray-800">Fourth Link</a>
-        </li>
-      </nav>
-    </div>
-    <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-      <h2
-        class="title-font font-medium text-white tracking-widest text-sm mb-3"
-      >
-        CATEGORIES
-      </h2>
-      <nav class="list-none mb-10">
-        <li>
-          <a class="text-black hover:text-gray-800">First Link</a>
-        </li>
-        <li>
-          <a class="text-black hover:text-gray-800">Second Link</a>
-        </li>
-        <li>
-          <a class="text-black hover:text-gray-800">Third Link</a>
-        </li>
-        <li>
-          <a class="text-black hover:text-gray-800">Fourth Link</a>
-        </li>
-      </nav>
-    </div>
+  <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+    <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Electronics</h2>
+    <nav class="list-none mb-10">
+      <li><a href="#" class="text-black hover:text-violet-800">Smartphones</a></li>
+      <li><a href="#" class="text-black hover:text-gray-800">Laptops</a></li>
+      <li><a href="#" class="text-black hover:text-gray-800">Tablets</a></li>
+      <li><a href="#" class="text-black hover:text-gray-800">Headphones</a></li>
+    </nav>
+  </div>
+  <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+    <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Fashion</h2>
+    <nav class="list-none mb-10">
+      <li><a href="#" class="text-black hover:text-gray-800">Men's Clothing</a></li>
+      <li><a href="#" class="text-black hover:text-gray-800">Women's Clothing</a></li>
+      <li><a href="#" class="text-black hover:text-gray-800">Shoes</a></li>
+      <li><a href="#" class="text-black hover:text-gray-800">Accessories</a></li>
+    </nav>
+  </div>
+  <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+    <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Home & Kitchen</h2>
+    <nav class="list-none mb-10">
+      <li><a href="#" class="text-black hover:text-gray-800">Furniture</a></li>
+      <li><a href="#" class="text-black hover:text-gray-800">Appliances</a></li>
+      <li><a href="#" class="text-black hover:text-gray-800">Cookware</a></li>
+      <li><a href="#" class="text-black hover:text-gray-800">Home Decor</a></li>
+    </nav>
+  </div>
+  <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+    <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Sports & Outdoors</h2>
+    <nav class="list-none mb-10">
+      <li><a href="#" class="text-black hover:text-gray-800">Exercise & Fitness</a></li>
+      <li><a href="#" class="text-black hover:text-gray-800">Camping & Hiking</a></li>
+      <li><a href="#" class="text-black hover:text-gray-800">Outdoor Recreation</a></li>
+      <li><a href="#" class="text-black hover:text-gray-800">Sports Equipment</a></li>
+    </nav>
+  </div>
+
   </div>
 </div>
 <div class="bg-violet-700">
@@ -577,7 +540,7 @@ function sendMail() {
     <p class="text-black text-sm text-center sm:text-left">
       © 2024 PriceHunt —
       <a
-        href="https://twitter.com/knyttneve"
+        href="mailto:pricehunt.pbl@gmail.com"
         rel="noopener noreferrer"
         class="text-black ml-1"
         target="_blank"

@@ -39,6 +39,11 @@ router.get('/products', async (req, res) => {
 router.get('/home',async(req, res) => {
     res.render('home',{title: 'Home'});
 });
+
+router.get('/chat',async(req, res) => {
+    res.render('chat',{title: 'Chat'});
+});
+
 router.post('/products', async (req, res) => {
     try {
         let productIds = null;
