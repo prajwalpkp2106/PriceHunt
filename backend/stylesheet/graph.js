@@ -10,7 +10,6 @@ function generateRandomPrices(initialPrice, minChange, maxChange) {
     const prices = [{ "date": "OCT", "price": initialPrice }];
     const months = ["JUL","AUG","OCT","SEPT","NOV", "DEC", "JAN", "FEB", "MAR", "APR"];
     let currentPrice = initialPrice;
-
     for (let i = 0; i < months.length; i++) {
         const randomChange = getRandomInt(minChange, maxChange);
         const change = Math.random() < 0.5 ? randomChange : -randomChange;
