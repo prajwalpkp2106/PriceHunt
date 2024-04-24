@@ -37,8 +37,21 @@ router.get('/products', async (req, res) => {
 
 
 router.get('/home',async(req, res) => {
-    res.render('home',{title: 'Home'});
+    let flag=true
+    if(req.isAuthenticated()){
+        flag=false
+        res.render('home',{title: 'Home',flag});
+    }
+    else{
+        res.render('home',{title: 'Home',flag});   
+    }
+    
 });
+
+router.get('/about',async(req, res) => {
+    res.render('about',{title: 'about'});
+});
+
 
 router.get('/chat',async(req, res) => {
     res.render('chat',{title: 'Chat'});
