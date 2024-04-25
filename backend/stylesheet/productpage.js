@@ -224,6 +224,7 @@ function openPopup1(button) {
   const productPrice = parseFloat(
       button.closest(".bg-white").querySelector("#productPrice").textContent.replace(/₹|,/g, "")
   );
+  console.log(productPrice);
   const initialPrice = productPrice;
   const minChange = -20; // Minimum decrease
   const maxChange = 30;
