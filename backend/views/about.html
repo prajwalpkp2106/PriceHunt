@@ -1,684 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-    />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - PriceHunt</title>
+  <link rel="stylesheet" href="/contact.css">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" class="sty">
+  <!-- Include any other CSS files if needed -->
+</head>
+<body>
 
-  </head>
-    
-
-    <style>
-      /* Add this CSS rule */
-a {
-  text-decoration: none;
-}
-
-      .slider-container {
-        position: relative;
-        width: 100%;
-        height: 300px; /* Adjust the height as needed */
-        overflow: hidden;
-        margin-bottom: 20px;
-      }
-
-      .slider-content {
-        display: flex;
-        position: absolute;
-        animation: slide 15s infinite; /* Adjust duration as needed */
-      }
-
-      .slider-content img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      @keyframes slide {
-        0% {
-          transform: translateX(0);
-        }
-        25% {
-          transform: translateX(-100%);
-        }
-        50% {
-          transform: translateX(-200%);
-        }
-        75% {
-          transform: translateX(-300%);
-        }
-        100% {
-          transform: translateX(0);
-        }
-      }
-    </style>
-  </head>
-
-  <body class="bg-gray-100">
-    <h1 class="text-3xl font-semibold text-center text-purple-800 mb-8">
-      About Us
-    </h1>
-
+<!-- Header Section -->
+<header class="text-black-600 body-font font-semibold bg-purple-500 h-30 ">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
      
+      <a class="flex title-font font-medium items-center text-black mb-4 md:mb-0">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-black p-2 bg-violet-600 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+          <span class="ml-3 text-xl">PriceHunt</span>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center cursor-pointer">
 
-    <div class="container mx-auto py-8">
-    
-     
+          <a class="mr-6 hover:text-violet-900" href="#home">Home</a>
+          <a class="mr-6 hover:text-violet-900" href="#contact_page">Contact Us</a>
+          <a class="mr-6 hover:text-violet-900" href="about.html">About</a>
 
-
-
-      <!-- Image and Description Section -->
-
-      <div class="md:w-full ">
-        <p class="text-lg text-gray-800 mb-4 bg-purple-200 p-4">
-          Get ready for a shopping revolution with our platform! We're all about
-          using price comparison websites to transform your experience. Say
-          goodbye to endless scrolling and hello to finding the best prices
-          effortlessly. With our cutting-edge technology, we're always leveling
-          up. Just a click and you're diving into a world of discounts. Join us
-          in celebrating these digital superheroes for changing the way we shop!
-        </p>
-      </div>
-
-
-      <!-- Vision and mission Section -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Card 1 -->
-        <div class="bg-white p-6 rounded-lg shadow-lg bg-purple-200">
-          <h2 class="text-xl font-semibold text-purple-800 text-center mb-4">
-            Our Vision
-          </h2>
-          <p class="text-gray-700">
-            Our platform envisions revolutionizing the shopping experience
-            through innovative technology and empowering consumers to make
-            informed purchasing decisions effortlessly.
-          </p>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="bg-white p-6 rounded-lg shadow-lg bg-purple-200">
-          <h2 class="text-xl font-semibold mb-4 text-purple-800 text-center">
-            Our Mission
-          </h2>
-          <p class="text-gray-700">
-            We strive to provide a seamless and user-friendly platform that
-            harnesses the power of price comparison websites, enabling shoppers
-            to find the best deals and save time and money with just a click.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Developers Team -->
-    <section class="text-gray-600 body-font" id="team">
-      <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-col text-center w-full mb-20">
-          <h1 class="text-2xl font-medium title-font mb-4 text-violet-800">
-            OUR TEAM
-          </h1>
-          <p class="lg:w-2/3 mx-auto leading-relaxed text-violet-600">
-            Meet the brilliant minds shaping our projects. Each member brings
-            distinctive skills and insights to our team, propelling us towards
-            excellence.
-          </p>
-        </div>
-        <div class="flex flex-wrap -m-4">
-          <div class="p-4 lg:w-1/3 md:w-1/2">
-            <div
-              class="h-full flex flex-col items-center text-center border rounded-lg shadow-xl"
-            >
-              <img
-                alt="team"
-                class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-                src="https://dummyimage.com/200x200"
-              />
-              <div class="w-full">
-                <h2 class="title-font font-medium text-lg text-gray-900">
-                  Prajwal Padole
-                </h2>
-                <h3 class="text-gray-500 mb-3">Backend Developer</h3>
-                <p class="mb-4">
-                  An expert in backend development, Prajwal ensures our systems
-                  are robust and reliable, powering our platform's
-                  functionality.
-                </p>
-                <span class="inline-flex">
-                  <!-- Social media icons -->
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="p-4 lg:w-1/3 md:w-1/2">
-            <div
-              class="h-full flex flex-col items-center text-center border rounded-lg shadow-xl"
-            >
-              <img
-                alt="team"
-                class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-                src="https://dummyimage.com/201x201"
-              />
-              <div class="w-full">
-                <h2 class="title-font font-medium text-lg text-gray-900">
-                  Pratik Patil
-                </h2>
-                <h3 class="text-gray-500 mb-3">Backend Developer</h3>
-                <p class="mb-4">
-                  Pratik brings his expertise in backend development to the
-                  table, ensuring our platform functions smoothly and
-                  efficiently.
-                </p>
-                <span class="inline-flex">
-                  <!-- Social media icons -->
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="p-4 lg:w-1/3 md:w-1/2">
-            <div
-              class="h-full flex flex-col items-center text-center border rounded-lg shadow-xl"
-            >
-              <img
-                alt="team"
-                class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-                src="https://dummyimage.com/202x202"
-              />
-              <div class="w-full">
-                <h2 class="title-font font-medium text-lg text-gray-900">
-                  Smeet Nahar
-                </h2>
-                <h3 class="text-gray-500 mb-3">Backend Developer</h3>
-                <p class="mb-4">
-                  Smeet is our go-to backend developer,ensures our systems run
-                  seamlessly, paving the way for a flawless user experience.
-                </p>
-                <span class="inline-flex">
-                  <!-- Social media icons -->
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="flex justify-center w-full">
-            <div class="p-4 lg:w-1/3 md:w-1/2">
-              <div
-                class="h-full flex flex-col items-center text-center border rounded-lg shadow-xl"
-              >
-                <img
-                  alt="team"
-                  class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-                  src="https://dummyimage.com/203x203"
-                />
-                <div class="w-full">
-                  <h2 class="title-font font-medium text-lg text-gray-900">
-                    Sakshi Marbhal
-                  </h2>
-                  <h3 class="text-gray-500 mb-3">Frontend Developer</h3>
-                  <p class="mb-4">
-                    Sakshi is our talented frontend developer, crafting engaging
-                    and intuitive user interfaces to elevate the user
-                    experience.
-                  </p>
-                  <span class="inline-flex">
-                    <!-- Social media icons -->
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="p-4 lg:w-1/3 md:w-1/2">
-              <div
-                class="h-full flex flex-col items-center text-center border rounded-lg shadow-xl"
-              >
-                <img
-                  alt="team"
-                  class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-                  src="https://dummyimage.com/204x204"
-                />
-                <div class="w-full">
-                  <h2 class="title-font font-medium text-lg text-gray-900">
-                    Riya Patil
-                  </h2>
-                  <h3 class="text-gray-500 mb-3">UI Designer</h3>
-                  <p class="mb-4">
-                    Riya's creative flair as a UI designer brings our platform
-                    to life, crafting visually stunning interfaces that
-                    captivate users.
-                  </p>
-                  <span class="inline-flex">
-                    <!-- Social media icons -->
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Future Scope Section -->
-
-    
-    <section class="text-gray-600 body-font">
-      <h1 class="text-3xl font-semibold text-center text-purple-800 mb-8">
-        Future Scope
-      </h1>
-      <div class="container px-5 py-24 mx-auto flex flex-wrap">
-        <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
-          <div
-            class="h-full w-6 absolute inset-0 flex items-center justify-center"
-          >
-            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
-          </div>
-          <div
-            class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-purple-500 text-white relative z-10 title-font font-medium text-sm"
-          >
-            1
-          </div>
-          <div
-            class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row"
-          >
-            <div
-              class="flex-shrink-0 w-24 h-24 bg-purple-100 text-purple-500 rounded-full inline-flex items-center justify-center"
-            >
+      </nav>
+       <!-- Searchbar -->
+       <form action="/products" method="POST" class="flex ml-2">
+        <!-- <input type="text" name="search" placeholder="Search..." class="rounded-md px-3 py-2 border-none bg-white text-gray-800" /> -->
+        <div class="relative ml-8 md:ml-0">
+          <input
+              type="text"
+              name="search"
+              placeholder="Search"
+              class="bg-gray-200 text-black px-10 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+              
+          />
+          <button
+              class="absolute inset-y-0 right-0 px-3 py-2 bg-purple-600 hover:bg-purple-600 rounded-r-lg">
               <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-12 h-12"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-              </svg>
-            </div>
-            <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-              <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">
-                Description
-              </h2>
-              <p class="leading-relaxed">
-                We plan to enhance user engagement by introducing personalized
-                recommendations based on user preferences and shopping history.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
-          <div
-            class="h-full w-6 absolute inset-0 flex items-center justify-center"
-          >
-            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
-          </div>
-          <div
-            class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-purple-500 text-white relative z-10 title-font font-medium text-sm"
-          >
-            2
-          </div>
-          <div
-            class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row"
-          >
-            <div
-              class="flex-shrink-0 w-24 h-24 bg-purple-100 text-purple-500 rounded-full inline-flex items-center justify-center"
-            >
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-12 h-12"
-                viewBox="0 0 24 24"
-              >
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-              </svg>
-            </div>
-            <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-              <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">
-                Implementation
-              </h2>
-              <p class="leading-relaxed">
-                Our team will integrate machine learning algorithms to analyze
-                user data and provide tailored product recommendations in
-                real-time.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
-          <div
-            class="h-full w-6 absolute inset-0 flex items-center justify-center"
-          >
-            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
-          </div>
-          <div
-            class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-purple-500 text-white relative z-10 title-font font-medium text-sm"
-          >
-            3
-          </div>
-          <div
-            class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row"
-          >
-            <div
-              class="flex-shrink-0 w-24 h-24 bg-purple-100 text-purple-500 rounded-full inline-flex items-center justify-center"
-            >
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-12 h-12"
-                viewBox="0 0 24 24"
-              >
-                <circle cx="12" cy="5" r="3"></circle>
-                <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
-              </svg>
-            </div>
-            <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-              <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">
-                Rollout
-              </h2>
-              <p class="leading-relaxed">
-                The new feature will be gradually rolled out to our users,
-                allowing for feedback and iterative improvements to optimize
-                performance.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
-          <div
-            class="h-full w-6 absolute inset-0 flex items-center justify-center"
-          >
-            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
-          </div>
-          <div
-            class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-purple-500 text-white relative z-10 title-font font-medium text-sm"
-          >
-            4
-          </div>
-          <div
-            class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row"
-          >
-            <div
-              class="flex-shrink-0 w-24 h-24 bg-purple-100 text-purple-500 rounded-full inline-flex items-center justify-center"
-            >
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-12 h-12"
-                viewBox="0 0 24 24"
-              >
-                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                <circle cx="12" cy="7" r="4"></circle>
-              </svg>
-            </div>
-            <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-              <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">
-                Expansion
-              </h2>
-              <p class="leading-relaxed">
-                As the personalized recommendation feature gains traction, we
-                aim to expand its capabilities to cover a wider range of product
-                categories.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="text-gray-800 body-font bg-purple-400 mt-8">
-      <div
-        class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"
-      >
-        <div
-          class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left"
-        >
-          <a
-            class="flex title-font font-medium items-center md:justify-start justify-center text-white"
-          >
-            <svg
+              class="h-6 w-6 text-white"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              class="w-10 h-10 txt-white p-2 bg-violet-500 rounded-full"
               viewBox="0 0 24 24"
-            >
+              stroke="currentColor"
+              >
               <path
-                d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
-              ></path>
-            </svg>
-            <span class="ml-3 text-xl text-black">PriceHunt</span>
-          </a>
-          <p class="mt-2 text-sm text-gray-800">
-            Discover the next level of shopping satisfaction!!!
-          </p>
-        </div>
-        <div
-          class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center"
-        >
-          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2
-              class="title-font font-medium text-purple-800 tracking-widest text-sm mb-3"
-            >
-              Electronics
-            </h2>
-            <nav class="list-none mb-10">
-              <li>
-                <a href="#" class="text-black hover:text-violet-800"
-                  >Smartphones</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-black hover:text-gray-800">Laptops</a>
-              </li>
-              <li>
-                <a href="#" class="text-black hover:text-gray-800">Tablets</a>
-              </li>
-              <li>
-                <a href="#" class="text-black hover:text-gray-800"
-                  >Headphones</a
-                >
-              </li>
-            </nav>
-          </div>
-          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2
-              class="title-font font-medium text-purple-800 tracking-widest text-sm mb-3"
-            >
-              Fashion
-            </h2>
-            <nav class="list-none mb-10">
-              <li>
-                <a href="#" class="text-black hover:text-gray-800"
-                  >Men's Clothing</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-black hover:text-gray-800"
-                  >Women's Clothing</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-black hover:text-gray-800">Shoes</a>
-              </li>
-              <li>
-                <a href="#" class="text-black hover:text-gray-800"
-                  >Accessories</a
-                >
-              </li>
-            </nav>
-          </div>
-          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2
-              class="title-font font-medium text-purple-800 tracking-widest text-sm mb-3"
-            >
-              Home & Kitchen
-            </h2>
-            <nav class="list-none mb-10">
-              <li>
-                <a href="#" class="text-black hover:text-gray-800">Furniture</a>
-              </li>
-              <li>
-                <a href="#" class="text-black hover:text-gray-800"
-                  >Appliances</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-black hover:text-gray-800">Cookware</a>
-              </li>
-              <li>
-                <a href="#" class="text-black hover:text-gray-800"
-                  >Home Decor</a
-                >
-              </li>
-            </nav>
-          </div>
-          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2
-              class="title-font font-medium text-purple-800 tracking-widest text-sm mb-3"
-            >
-              Sports & Outdoors
-            </h2>
-            <nav class="list-none mb-10">
-              <li>
-                <a href="#" class="text-black hover:text-gray-800"
-                  >Exercise & Fitness</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-black hover:text-gray-800"
-                  >Camping & Hiking</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-black hover:text-gray-800"
-                  >Outdoor Recreation</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-black hover:text-gray-800"
-                  >Sports Equipment</a
-                >
-              </li>
-            </nav>
-          </div>
-        </div>
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 15l4.57 4.57M4 12a8 8 0 018-8h.001M8 21a8 8 0 100-16 8 8 0 000 16z"
+              />
+              </svg>
+          </button>
       </div>
-
-      <!-- Footer -->
-      <div class="bg-purple-700">
-        <div
-          class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row"
+        <select
+          class="rounded-md px-3 py-2 border-none bg-white text-gray-800 ml-2" name="category"
         >
-          <p class="text-black text-sm text-center sm:text-left">
-            © 2024 PriceHunt —
-            <a
-              href="mailto:pricehunt.pbl@gmail.com"
-              rel="noopener noreferrer"
-              class="text-black ml-1"
-              target="_blank"
-              >pricehunt.pbl@gmail.com</a
-            >
-          </p>
-          <span
-            class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start"
-          >
-            <a class="text-black" href="#">
-              <svg
-                fill="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
-                ></path>
-              </svg>
-            </a>
-            <a class="ml-3 text-black" href="#">
-              <svg
-                fill="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
-                ></path>
-              </svg>
-            </a>
-            <a class="ml-3 text-black" href="#">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-              >
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                <path
-                  d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
-                ></path>
-              </svg>
-            </a>
-            <a class="ml-3 text-black" href="#">
-              <svg
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="0"
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke="none"
-                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
-                ></path>
-                <circle cx="4" cy="4" r="2" stroke="none"></circle>
-              </svg>
-            </a>
+          <option value="electronics">Electronic</option>
+          <option value="fashion">Fashion</option>
+        </select>
+        <!-- <button type="submit" class="bg-purple-600 text-white px-3 py-1 rounded-md hover:bg-purple-700 ml-2">Search</button> -->
+    </form>
 
-            <a class="ml-3 text-black" href="#">
-              <svg fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M12 2C6.477 2 2 6.477 2 12c0 4.419 2.865 8.167 6.839 9.49.5.092.682-.218.682-.48 0-.237-.008-.866-.013-1.7-2.782.604-3.37-1.34-3.37-1.34-.454-1.15-1.11-1.456-1.11-1.456-.908-.62.07-.607.07-.607 1.003.07 1.532 1.03 1.532 1.03.893 1.53 2.345 1.087 2.918.83.09-.645.35-1.087.636-1.338-2.225-.253-4.566-1.112-4.566-4.945 0-1.092.39-1.986 1.032-2.68-.104-.252-.448-1.268.098-2.64 0 0 .837-.268 2.74 1.02.794-.22 1.64-.33 2.485-.334.847.004 1.692.114 2.485.334 1.903-1.288 2.738-1.02 2.738-1.02.55 1.372.206 2.388.102 2.64.642.694 1.03 1.588 1.03 2.68 0 3.84-2.344 4.688-4.576 4.937.36.31.678.922.678 1.858 0 1.344-.012 2.425-.012 2.755 0 .267.18.577.688.478C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"
-                ></path>
-              </svg>
-            </a>
-          </span>
-        </div>
+      <button class="inline-flex items-center bg-white border-0 py-2 px-4 focus:outline-none hover:bg-violet-600 rounded text-base mt-8 md:mt-0 ml-6 mr-0" onclick="window.location.href='/users/login'">Login</button>
+  </div>
+</header>  
+
+
+<!-- Main Content Section -->
+<section class="text-black body-font bg-purple-100">
+
+  <h2 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-purple-900 text-center py-10 ">About Us</h2>
+
+  <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+    <!-- Vision and Mission Section -->
+    <div class="lg:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+      <h4 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-purple-900">Our Vision</h4>
+      <p class="mb-8 leading-relaxed">To become the leading platform for price comparison and shopping convenience, empowering consumers to make informed purchasing decisions effortlessly.</p>
+      <h2 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-purple-900">Our Mission</h2>
+      <p class="mb-8 leading-relaxed">To simplify the shopping experience by aggregating pricing data, providing comprehensive comparisons, and offering personalized recommendations, thereby enhancing customer satisfaction and loyalty.</p>
+    </div>
+    <!-- Image Section -->
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+      <img class="object-cover object-center rounded" src="https://img.freepik.com/premium-vector/mobile-shopping-concept-with-people-buy-things-online-store-via-smartphone_138260-1287.jpg" alt="Team Image">
+    </div>
+  </div>
+  
+  <!-- Team Section -->
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h1 class="text-2xl font-medium title-font mb-4 text-purple-900">Introducing Our Team</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Meet the dedicated individuals behind PriceHunt, working tirelessly to provide you with the best shopping experience.</p>
       </div>
-    </footer>
+      <div class="flex flex-wrap -m-4">
+        <!-- Team Members -->
+        <div class="p-4 lg:w-1/5 md:w-1/2">
+          <div class="h-full flex flex-col items-center text-center">
+            <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/202x202">
+            <div class="w-full">
+              <h2 class="title-font font-medium text-lg text-gray-900">Prajwal Padole</h2>
+              <h3 class="text-gray-500 mb-3">Backend Developer</h3>
+              <p class="mb-4">Passionate about creating intuitive user interfaces to enhance your shopping experience.</p>
+            </div>
+          </div>
+        </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script>
-      // JavaScript to clone images for continuous looping
-      const sliderContent = document.querySelector(".slider-content");
-      const images = sliderContent.querySelectorAll("img");
-      images.forEach((image) => {
-        const clone = image.cloneNode(true);
-        sliderContent.appendChild(clone);
-      });
-    </script>
-  </body>
+        <div class="p-4 lg:w-1/5 md:w-1/2">
+          <div class="h-full flex flex-col items-center text-center">
+            <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/202x202">
+            <div class="w-full">
+              <h2 class="title-font font-medium text-lg text-gray-900">Prateek Patil</h2>
+              <h3 class="text-gray-500 mb-3">Backend Developer</h3>
+              <p class="mb-4">Bringing the magic of backend technologies to ensure a seamless shopping journey for you.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 lg:w-1/5 md:w-1/2">
+          <div class="h-full flex flex-col items-center text-center">
+            <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/202x202">
+            <div class="w-full">
+              <h2 class="title-font font-medium text-lg text-gray-900">Smeet Nahar</h2>
+              <h3 class="text-gray-500 mb-3">Backend Developer</h3>
+              <p class="mb-4">Crafting innovative marketing strategies to connect you with the best deals and offers.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 lg:w-1/5 md:w-1/2">
+          <div class="h-full flex flex-col items-center text-center">
+            <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/202x202">
+            <div class="w-full">
+              <h2 class="title-font font-medium text-lg text-gray-900">Riya Patil</h2>
+              <h3 class="text-gray-500 mb-3">UI Developer</h3>
+              <p class="mb-4">Dedicated to providing you with timely assistance and resolving all your queries.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 lg:w-1/5 md:w-1/2">
+          <div class="h-full flex flex-col items-center text-center">
+            <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/202x202">
+            <div class="w-full">
+              <h2 class="title-font font-medium text-lg text-gray-900">Sakshi Marbhal</h2>
+              <h3 class="text-gray-500 mb-3">Frontend Developer</h3>
+              <p class="mb-4">Ensuring that every aspect of your shopping journey meets the highest standards of quality.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</section>
+
+<!-- Footer Section -->
+<footer class="text-gray-800 body-font bg-purple-400 mt-8">
+  <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+    <p class="text-black text-sm text-center sm:text-left">
+      &copy; 2024 PriceHunt —
+      <a href="mailto:pricehunt.pbl@gmail.com" rel="noopener noreferrer" class="text-black ml-1" target="_blank">pricehunt.pbl@gmail.com</a>
+    </p>
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+      <!-- Social media icons can be added here if needed -->
+    </span>
+  </div>
+</footer>
+
+<!-- JavaScript code can be included if needed -->
+
+</body>
 </html>

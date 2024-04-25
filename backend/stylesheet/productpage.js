@@ -261,8 +261,19 @@ function closePopup1() {
   window.close();
 }
 function openPopup() {
-  console.log('hi');
   document.getElementById('popup').classList.remove('hidden');
+  const productGrid = document.getElementById("productGrid");
+  const products = [...productGrid.children];
+  products.sort((a, b) => {
+    const priceA = parseFloat(
+      a.querySelector(".text-purple-500").innerText.replace(/₹|,/g, "") 
+    );
+    const priceB = parseFloat(
+      b.querySelector(".text-purple-500").innerText.replace(/₹|,/g, "") 
+    );
+    return priceA - priceB;
+  });
+  document.getElementById('showpopup').appendChild(products[0]);
 }
 
 function closePopup() {
