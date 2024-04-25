@@ -46,6 +46,7 @@ router.get('/home',async(req, res) => {
         res.render('home',{title: 'Home',flag});   
     }
     
+<<<<<<< HEAD
 });
 
 router.get('/about',async(req, res) => {
@@ -53,7 +54,19 @@ router.get('/about',async(req, res) => {
 });
 router.get('/chat',async(req, res) => {
     res.render('chat',{title: 'chat'});
+=======
+>>>>>>> c0d0e885ab3062fe644c3501398dfe18c168a862
 });
+
+router.get('/about',async(req, res) => {
+    res.render('about',{title: 'about'});
+});
+
+
+router.get('/chat',async(req, res) => {
+    res.render('chat',{title: 'Chat'});
+});
+
 router.post('/products', async (req, res) => {
     try {
         let productIds = null;
