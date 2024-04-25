@@ -9,7 +9,7 @@ const passport = require('passport');
 const app = express();
 
 require('./authontication/passport')(passport);
-
+    
 const db=require('./authontication/keys').Mongouri;
 mongoose.connect(db,{useNewUrlParser:true})
     .then(()=>console.log('DB connected'))
